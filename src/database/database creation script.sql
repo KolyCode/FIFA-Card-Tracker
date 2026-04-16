@@ -1,23 +1,24 @@
-CREATE DATABASE FifaCardTracker;
+-- SQLite3 schema (Django manages the database file; run via manage.py dbshell or sqlite3 CLI)
+-- Enable foreign key support at runtime: PRAGMA foreign_keys = ON;
 
 CREATE TABLE Players(
-    id INT PRIMARY KEY,
-    sticker_number VARCHAR,
-    player_name VARCHAR,
-    team VARCHAR,
-    position VARCHAR,
-    birth_year INT
+    id INTEGER PRIMARY KEY,
+    sticker_number TEXT,
+    player_name TEXT,
+    team TEXT,
+    position TEXT,
+    birth_year INTEGER
 );
 
 CREATE TABLE Users(
-    username VARCHAR PRIMARY KEY,
-    account_password VARCHAR,
+    username TEXT PRIMARY KEY,
+    account_password TEXT
 );
 
 CREATE TABLE UserCards(
-    username VARCHAR NOT NULL,
-    player_id INT,
+    username TEXT NOT NULL,
+    player_id INTEGER,
     PRIMARY KEY (username, player_id),
     FOREIGN KEY (username) REFERENCES Users(username),
-    FOREIGN KEY (player_id) REFERENCES Players(id),
+    FOREIGN KEY (player_id) REFERENCES Players(id)
 );
