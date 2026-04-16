@@ -22,7 +22,7 @@ const other = {
       id: 'documentation',
       title: 'Documentation',
       type: 'item',
-      url: '#',
+      url: 'https://github.com/KolyCode/FIFA-Card-Tracker',
       icon: icons.IconHelp,
       external: true,
       target: true
