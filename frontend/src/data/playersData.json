@@ -1,0 +1,5805 @@
+[
+  {
+    "sofifa_id": "222123",
+    "player_name": "Aaron Long",
+    "team": "United States",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "10141317",
+    "player_name": "Ró-Ró",
+    "team": "Qatar",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "194958",
+    "player_name": "Aaron Mooy",
+    "team": "Australia",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "233934",
+    "player_name": "Aaron Ramsdale",
+    "team": "England",
+    "position": "GK",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "186561",
+    "player_name": "Aaron Ramsey",
+    "team": "Wales",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "237499",
+    "player_name": "Abdelhamid Sabiri",
+    "team": "Morocco",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "210259",
+    "player_name": "Abdelkarim Hassan",
+    "team": "Qatar",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "213761",
+    "player_name": "Abderrazak Hamdallah",
+    "team": "Morocco",
+    "position": "FW",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "264432",
+    "player_name": "Abdessamad Ezzalzouli",
+    "team": "Morocco",
+    "position": "FW",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "225711",
+    "player_name": "Abdou Diallo",
+    "team": "Senegal",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "267680",
+    "player_name": "Abdul Fatawu Issahaku",
+    "team": "Ghana",
+    "position": "FW",
+    "birth_year": 2004
+  },
+  {
+    "sofifa_id": "215911",
+    "player_name": "Abdulaziz Hatem",
+    "team": "Qatar",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "241197",
+    "player_name": "Abdulelah Al-Amri",
+    "team": "Saudi Arabia",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "230713",
+    "player_name": "Abdulellah Al-Malki",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "213901",
+    "player_name": "Abdullah Madu",
+    "team": "Saudi Arabia",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "210926",
+    "player_name": "Abdullah Otayf",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "238043",
+    "player_name": "Abdulrahman Al-Aboud",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "272560",
+    "player_name": "Abolfazl Jalali",
+    "team": "IR Iran",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "271027",
+    "player_name": "Achraf Dari",
+    "team": "Morocco",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "235212",
+    "player_name": "Achraf Hakimi",
+    "team": "Morocco",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "234396",
+    "player_name": "Adam Davies",
+    "team": "Wales",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "210008",
+    "player_name": "Adrien Rabiot",
+    "team": "France",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "253281",
+    "player_name": "Agustín Canobbio",
+    "team": "Uruguay",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "268853",
+    "player_name": "Ahmad Nourollahi",
+    "team": "IR Iran",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "268779",
+    "player_name": "Ahmed Alaaeldin",
+    "team": "Qatar",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "241777",
+    "player_name": "Ahmed Reda Tagnaouti",
+    "team": "Morocco",
+    "position": "GK",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "268825",
+    "player_name": "Aimen Dahmen",
+    "team": "Tunisia",
+    "position": "GK",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "237647",
+    "player_name": "Ajdin Hrustic",
+    "team": "Australia",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "234051",
+    "player_name": "Akram Afif",
+    "team": "Qatar",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "237604",
+    "player_name": "Alan Franco",
+    "team": "Ecuador",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "263578",
+    "player_name": "Alejandro Balde",
+    "team": "Spain",
+    "position": "DF",
+    "birth_year": 2003
+  },
+  {
+    "sofifa_id": "215716",
+    "player_name": "Aleksandar Mitrović",
+    "team": "Serbia",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "16132215",
+    "player_name": "Alex Sandro",
+    "team": "Brazil",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "212462",
+    "player_name": "Alex Telles",
+    "team": "Brazil",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "245235",
+    "player_name": "Alexander Bah",
+    "team": "Denmark",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "212219",
+    "player_name": "Alexander Djiku",
+    "team": "Ghana",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "237923",
+    "player_name": "Alexander Domínguez",
+    "team": "Ecuador",
+    "position": "GK",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "239837",
+    "player_name": "Alexis Mac Allister",
+    "team": "Argentina",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "233260",
+    "player_name": "Alexis Vega",
+    "team": "Mexico",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "201976",
+    "player_name": "Alfred Gomis",
+    "team": "Senegal",
+    "position": "GK",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "156433",
+    "player_name": "Alfredo Talavera",
+    "team": "Mexico",
+    "position": "GK",
+    "birth_year": 1982
+  },
+  {
+    "sofifa_id": "252711",
+    "player_name": "Ali Abdi",
+    "team": "Tunisia",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "210259",
+    "player_name": "Ali Al Hassan",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "229851",
+    "player_name": "Ali Al-Bulaihi",
+    "team": "Saudi Arabia",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "270564",
+    "player_name": "Ali Assadalla",
+    "team": "Qatar",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "243551",
+    "player_name": "Ali Gholizadeh",
+    "team": "IR Iran",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "241793",
+    "player_name": "Ali Karimi",
+    "team": "IR Iran",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "15836365",
+    "player_name": "Ali Maâloul",
+    "team": "Tunisia",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "257946",
+    "player_name": "Alidu Seidu",
+    "team": "Ghana",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "241790",
+    "player_name": "Alireza Beiranvand",
+    "team": "IR Iran",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "215871",
+    "player_name": "Alireza Jahanbakhsh",
+    "team": "IR Iran",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "79270",
+    "player_name": "Alisson",
+    "team": "Brazil",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "256107",
+    "player_name": "Alistair Johnston",
+    "team": "Canada",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "259094",
+    "player_name": "Almoez Ali",
+    "team": "Qatar",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "193105",
+    "player_name": "Alphonse Areola",
+    "team": "France",
+    "position": "GK",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "234396",
+    "player_name": "Alphonso Davies",
+    "team": "Canada",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "257057",
+    "player_name": "Amadou Onana",
+    "team": "Belgium",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "237419",
+    "player_name": "Amir Abedzadeh",
+    "team": "IR Iran",
+    "position": "GK",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "260843",
+    "player_name": "Anass Zaroury",
+    "team": "Morocco",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "227236",
+    "player_name": "Andre-Frank Zambo Anguissa",
+    "team": "Cameroon",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "213661",
+    "player_name": "Andreas Christensen",
+    "team": "Denmark",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "201943",
+    "player_name": "Andreas Cornelius",
+    "team": "Denmark",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "240017",
+    "player_name": "Andreas Skov Olsen",
+    "team": "Denmark",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "216354",
+    "player_name": "Andrej Kramarić",
+    "team": "Croatia",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "183244",
+    "player_name": "Andrew Redmayne",
+    "team": "Australia",
+    "position": "GK",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "218212",
+    "player_name": "Andries Noppert",
+    "team": "Netherlands",
+    "position": "GK",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "220746",
+    "player_name": "Andrija Živković",
+    "team": "Serbia",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "176571",
+    "player_name": "André Ayew",
+    "team": "Ghana",
+    "position": "MF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "257057",
+    "player_name": "André Onana",
+    "team": "Cameroon",
+    "position": "GK",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "218868",
+    "player_name": "André Silva",
+    "team": "Portugal",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "171897",
+    "player_name": "Andrés Guardado",
+    "team": "Mexico",
+    "position": "MF",
+    "birth_year": 1986
+  },
+  {
+    "sofifa_id": "255210",
+    "player_name": "Anis Ben Slimane",
+    "team": "Tunisia",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "253004",
+    "player_name": "Ansu Fati",
+    "team": "Spain",
+    "position": "FW",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "188335",
+    "player_name": "Ante Budimir",
+    "team": "Croatia",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "14625075",
+    "player_name": "Anthony Contreras",
+    "team": "Costa Rica",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "255119",
+    "player_name": "Anthony Hernández",
+    "team": "Costa Rica",
+    "position": "FW",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "194765",
+    "player_name": "Antoine Griezmann",
+    "team": "France",
+    "position": "MF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "241236",
+    "player_name": "Antoine Semenyo",
+    "team": "Ghana",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "229348",
+    "player_name": "Antonee Robinson",
+    "team": "United States",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "205452",
+    "player_name": "Antonio Rüdiger",
+    "team": "Germany",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "255475",
+    "player_name": "Antony",
+    "team": "Brazil",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "218868",
+    "player_name": "António Silva",
+    "team": "Portugal",
+    "position": "DF",
+    "birth_year": 2003
+  },
+  {
+    "sofifa_id": "236764",
+    "player_name": "Ao Tanaka",
+    "team": "Japan",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "257186",
+    "player_name": "Ardon Jasari",
+    "team": "Switzerland",
+    "position": "FW",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "205175",
+    "player_name": "Arkadiusz Milik",
+    "team": "Poland",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "247497",
+    "player_name": "Armel Bella Kotchap",
+    "team": "Germany",
+    "position": "DF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "257278",
+    "player_name": "Arthur Theate",
+    "team": "Belgium",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "177790",
+    "player_name": "Artur Jędrzejczyk",
+    "team": "Poland",
+    "position": "DF",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "257842",
+    "player_name": "Asiri Haitham",
+    "team": "Saudi Arabia",
+    "position": "FW",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "239878",
+    "player_name": "Assim Madibo",
+    "team": "Qatar",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "134744",
+    "player_name": "Atiba Hutchinson",
+    "team": "Canada",
+    "position": "MF",
+    "birth_year": 1983
+  },
+  {
+    "sofifa_id": "241637",
+    "player_name": "Aurélien Tchouaméni",
+    "team": "France",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "212830",
+    "player_name": "Awer Mabil",
+    "team": "Australia",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "229942",
+    "player_name": "Axel Disasi",
+    "team": "France",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "177413",
+    "player_name": "Axel Witsel",
+    "team": "Belgium",
+    "position": "MF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "252162",
+    "player_name": "Ayase Ueda",
+    "team": "Japan",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "195834",
+    "player_name": "Aymen Mathlouthi",
+    "team": "Tunisia",
+    "position": "GK",
+    "birth_year": 1984
+  },
+  {
+    "sofifa_id": "212218",
+    "player_name": "Aymeric Laporte",
+    "team": "Spain",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "241412",
+    "player_name": "Ayrton Preciado",
+    "team": "Ecuador",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "202157",
+    "player_name": "Aziz Behich",
+    "team": "Australia",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "255125",
+    "player_name": "Azzedine Ounahi",
+    "team": "Morocco",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "233642",
+    "player_name": "Aïssa Laïdouni",
+    "team": "Tunisia",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "209620",
+    "player_name": "Baba Rahman",
+    "team": "Ghana",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "241778",
+    "player_name": "Badr Banoun",
+    "team": "Morocco",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "164464",
+    "player_name": "Bailey Wright",
+    "team": "Australia",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "261084",
+    "player_name": "Bamba Dieng",
+    "team": "Senegal",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "199763",
+    "player_name": "Bartosz Bereszyński",
+    "team": "Poland",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "268782",
+    "player_name": "Bassam Al-Rawi",
+    "team": "Qatar",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "13327055",
+    "player_name": "Bechir Ben Saïd",
+    "team": "Tunisia",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "248687",
+    "player_name": "Ben Cabango",
+    "team": "Wales",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "205923",
+    "player_name": "Ben Davies",
+    "team": "Wales",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "231936",
+    "player_name": "Ben White",
+    "team": "England",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "226851",
+    "player_name": "Benjamin Pavard",
+    "team": "France",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "218667",
+    "player_name": "Bernardo Silva",
+    "team": "Portugal",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "257504",
+    "player_name": "Bilal El Khannous",
+    "team": "Morocco",
+    "position": "MF",
+    "birth_year": 2004
+  },
+  {
+    "sofifa_id": "197366",
+    "player_name": "Bilel Ifa",
+    "team": "Tunisia",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "241673",
+    "player_name": "Borna Barišić",
+    "team": "Croatia",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "243388",
+    "player_name": "Borna Sosa",
+    "team": "Croatia",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "268771",
+    "player_name": "Boualem Khoukhi",
+    "team": "Qatar",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "246242",
+    "player_name": "Boulaye Dia",
+    "team": "Senegal",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "268719",
+    "player_name": "Brandon Aguilera",
+    "team": "Costa Rica",
+    "position": "MF",
+    "birth_year": 2003
+  },
+  {
+    "sofifa_id": "222357",
+    "player_name": "Breel Embolo",
+    "team": "Switzerland",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "247361",
+    "player_name": "Brenden Aaronson",
+    "team": "United States",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "152536",
+    "player_name": "Brennan Johnson",
+    "team": "Wales",
+    "position": "FW",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "248298",
+    "player_name": "Bruno Fernandes",
+    "team": "Portugal",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "247851",
+    "player_name": "Bruno Guimarães",
+    "team": "Brazil",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "215455",
+    "player_name": "Bruno Petković",
+    "team": "Croatia",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "243014",
+    "player_name": "Bryan Mbeumo",
+    "team": "Cameroon",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "198335",
+    "player_name": "Bryan Oviedo",
+    "team": "Costa Rica",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "261505",
+    "player_name": "Bryan Ruiz",
+    "team": "Costa Rica",
+    "position": "MF",
+    "birth_year": 1985
+  },
+  {
+    "sofifa_id": "246669",
+    "player_name": "Bukayo Saka",
+    "team": "England",
+    "position": "FW",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "196978",
+    "player_name": "Callum Wilson",
+    "team": "England",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "228174",
+    "player_name": "Cameron Carter-Vickers",
+    "team": "United States",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "246006",
+    "player_name": "Cameron Devlin",
+    "team": "Australia",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "221860",
+    "player_name": "Carlos Gruezo",
+    "team": "Ecuador",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "229466",
+    "player_name": "Carlos Martínez",
+    "team": "Costa Rica",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "234153",
+    "player_name": "Carlos Soler",
+    "team": "Spain",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "200145",
+    "player_name": "Casemiro",
+    "team": "Brazil",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "15971785",
+    "player_name": "Celso Borges",
+    "team": "Costa Rica",
+    "position": "MF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "251470",
+    "player_name": "Charles De Ketelaere",
+    "team": "Belgium",
+    "position": "FW",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "235389",
+    "player_name": "Charly Rodríguez",
+    "team": "Mexico",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "186801",
+    "player_name": "Cheikhou Kouyaté",
+    "team": "Senegal",
+    "position": "MF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "247686",
+    "player_name": "Cho Guesung",
+    "team": "Korea Republic",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "76926",
+    "player_name": "Cho Hyun-woo",
+    "team": "Korea Republic",
+    "position": "GK",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "15357855",
+    "player_name": "Cho Yumin",
+    "team": "Korea Republic",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "173752",
+    "player_name": "Chris Gunter",
+    "team": "Wales",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "233201",
+    "player_name": "Chris Mepham",
+    "team": "Wales",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "231138",
+    "player_name": "Christian Bassogog",
+    "team": "Cameroon",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "190460",
+    "player_name": "Christian Eriksen",
+    "team": "Denmark",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "234913",
+    "player_name": "Christian Fassnacht",
+    "team": "Switzerland",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "209846",
+    "player_name": "Christian Günter",
+    "team": "Germany",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "210697",
+    "player_name": "Christian Nørgaard",
+    "team": "Denmark",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "227796",
+    "player_name": "Christian Pulisic",
+    "team": "United States",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "260658",
+    "player_name": "Christopher Wooh",
+    "team": "Cameroon",
+    "position": "DF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "242516",
+    "player_name": "Cody Gakpo",
+    "team": "Netherlands",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "232183",
+    "player_name": "Collins Fai",
+    "team": "Cameroon",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "225147",
+    "player_name": "Connor Roberts",
+    "team": "Wales",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "202048",
+    "player_name": "Conor Coady",
+    "team": "England",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "238216",
+    "player_name": "Conor Gallagher",
+    "team": "England",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "209888",
+    "player_name": "Craig Goodwin",
+    "team": "Australia",
+    "position": "MF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "226807",
+    "player_name": "Cristian Roldan",
+    "team": "United States",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "232488",
+    "player_name": "Cristian Romero",
+    "team": "Argentina",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "20801",
+    "player_name": "Cristiano Ronaldo",
+    "team": "Portugal",
+    "position": "FW",
+    "birth_year": 1985
+  },
+  {
+    "sofifa_id": "226777",
+    "player_name": "Cyle Larin",
+    "team": "Canada",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "184432",
+    "player_name": "César Azpilicueta",
+    "team": "Spain",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "229980",
+    "player_name": "César Montes",
+    "team": "Mexico",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "232730",
+    "player_name": "Daichi Kamada",
+    "team": "Japan",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "246321",
+    "player_name": "Daizen Maeda",
+    "team": "Japan",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "190815",
+    "player_name": "Daley Blind",
+    "team": "Netherlands",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "223779",
+    "player_name": "Damian Szymański",
+    "team": "Poland",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "13697394",
+    "player_name": "Dani Alves",
+    "team": "Brazil",
+    "position": "DF",
+    "birth_year": 1983
+  },
+  {
+    "sofifa_id": "204963",
+    "player_name": "Dani Carvajal",
+    "team": "Spain",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "244260%3Fprofile%3Dnew",
+    "player_name": "Dani Olmo",
+    "team": "Spain",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "268832",
+    "player_name": "Daniel Afriyie Barnieh",
+    "team": "Ghana",
+    "position": "FW",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "212883",
+    "player_name": "Daniel Amartey",
+    "team": "Ghana",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "268716",
+    "player_name": "Daniel Chacón",
+    "team": "Costa Rica",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "232104",
+    "player_name": "Daniel James",
+    "team": "Wales",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "244112",
+    "player_name": "Daniel Kyereh",
+    "team": "Ghana",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "237580",
+    "player_name": "Daniel Schmidt",
+    "team": "Japan",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "172522",
+    "player_name": "Daniel Wass",
+    "team": "Denmark",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "273106",
+    "player_name": "Danilo",
+    "team": "Brazil",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "243276",
+    "player_name": "Danilo Pereira",
+    "team": "Portugal",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "268834",
+    "player_name": "Danlad Ibrahim",
+    "team": "Ghana",
+    "position": "GK",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "181481",
+    "player_name": "Danny Vukovic",
+    "team": "Australia",
+    "position": "GK",
+    "birth_year": 1985
+  },
+  {
+    "sofifa_id": "207998",
+    "player_name": "Danny Ward",
+    "team": "Wales",
+    "position": "GK",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "212127",
+    "player_name": "Darko Lazović",
+    "team": "Serbia",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "253072",
+    "player_name": "Darwin Núñez",
+    "team": "Uruguay",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "236703",
+    "player_name": "David Raum",
+    "team": "Germany",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "220901",
+    "player_name": "David Raya",
+    "team": "Spain",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "193728",
+    "player_name": "David Wotherspoon",
+    "team": "Canada",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "203483",
+    "player_name": "Davy Klaassen",
+    "team": "Netherlands",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "247228",
+    "player_name": "Dayne St. Clair",
+    "team": "Canada",
+    "position": "GK",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "229558",
+    "player_name": "Dayot Upamecano",
+    "team": "France",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "212722",
+    "player_name": "DeAndre Yedlin",
+    "team": "United States",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "234378",
+    "player_name": "Declan Rice",
+    "team": "England",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "195086",
+    "player_name": "Dejan Lovren",
+    "team": "Croatia",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "185349",
+    "player_name": "Denis Odoi",
+    "team": "Ghana",
+    "position": "DF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "229261",
+    "player_name": "Denis Zakaria",
+    "team": "Switzerland",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "233096",
+    "player_name": "Denzel Dumfries",
+    "team": "Netherlands",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "243009",
+    "player_name": "Derek Cornelius",
+    "team": "Canada",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "220906",
+    "player_name": "Devis Epassy",
+    "team": "Cameroon",
+    "position": "GK",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "182493",
+    "player_name": "Diego Godín",
+    "team": "Uruguay",
+    "position": "DF",
+    "birth_year": 1986
+  },
+  {
+    "sofifa_id": "245065",
+    "player_name": "Diego Palacios",
+    "team": "Ecuador",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "234577",
+    "player_name": "Diogo Costa",
+    "team": "Portugal",
+    "position": "GK",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "234574",
+    "player_name": "Diogo Dalot",
+    "team": "Portugal",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "229752",
+    "player_name": "Djibril Sow",
+    "team": "Switzerland",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "254069",
+    "player_name": "Djorkaeff Reasco",
+    "team": "Ecuador",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "199206",
+    "player_name": "Domagoj Vida",
+    "team": "Croatia",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "241671",
+    "player_name": "Dominik Livaković",
+    "team": "Croatia",
+    "position": "GK",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "268717",
+    "player_name": "Douglas López",
+    "team": "Costa Rica",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "175943",
+    "player_name": "Dries Mertens",
+    "team": "Belgium",
+    "position": "MF",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "199434",
+    "player_name": "Dušan Tadić",
+    "team": "Serbia",
+    "position": "MF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "246430",
+    "player_name": "Dušan Vlahović",
+    "team": "Serbia",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "235565",
+    "player_name": "Dylan Bronn",
+    "team": "Tunisia",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "243349",
+    "player_name": "Dylan Levitt",
+    "team": "Wales",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "183277",
+    "player_name": "Eden Hazard",
+    "team": "Belgium",
+    "position": "MF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "210257",
+    "player_name": "Ederson",
+    "team": "Brazil",
+    "position": "GK",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "215556",
+    "player_name": "Edimilson Fernandes",
+    "team": "Switzerland",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "179813",
+    "player_name": "Edinson Cavani",
+    "team": "Uruguay",
+    "position": "FW",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "234642",
+    "player_name": "Edouard Mendy",
+    "team": "Senegal",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "235844",
+    "player_name": "Edson Álvarez",
+    "team": "Mexico",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "248243",
+    "player_name": "Eduardo Camavinga",
+    "team": "France",
+    "position": "DF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "194354",
+    "player_name": "Ehsan Hajsafi",
+    "team": "IR Iran",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "180739",
+    "player_name": "Eiji Kawashima",
+    "team": "Japan",
+    "position": "GK",
+    "birth_year": 1983
+  },
+  {
+    "sofifa_id": "238392",
+    "player_name": "Elisha Owusu",
+    "team": "Ghana",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "225126",
+    "player_name": "Ellyes Skhiri",
+    "team": "Tunisia",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "202811",
+    "player_name": "Emiliano Martínez",
+    "team": "Argentina",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "220295",
+    "player_name": "Enner Valencia",
+    "team": "Ecuador",
+    "position": "FW",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "241007",
+    "player_name": "Enzo Ebosse",
+    "team": "Cameroon",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "247090",
+    "player_name": "Enzo Fernández",
+    "team": "Argentina",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "233885",
+    "player_name": "Eray Cömert",
+    "team": "Switzerland",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "202335",
+    "player_name": "Eric Dier",
+    "team": "England",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "216302",
+    "player_name": "Eric García",
+    "team": "Spain",
+    "position": "DF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "183569",
+    "player_name": "Eric Maxim Choupo-Moting",
+    "team": "Cameroon",
+    "position": "FW",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "172619",
+    "player_name": "Erick Gutiérrez",
+    "team": "Mexico",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "198040",
+    "player_name": "Esteban Alvarado",
+    "team": "Costa Rica",
+    "position": "GK",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "235735",
+    "player_name": "Ethan Ampadu",
+    "team": "Wales",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "219736",
+    "player_name": "Ethan Horvath",
+    "team": "United States",
+    "position": "GK",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "10886046",
+    "player_name": "Everton Ribeiro",
+    "team": "Brazil",
+    "position": "MF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "231521",
+    "player_name": "Exequiel Palacios",
+    "team": "Argentina",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "183346",
+    "player_name": "Fabian Frei",
+    "team": "Switzerland",
+    "position": "MF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "243664",
+    "player_name": "Fabian Rieder",
+    "team": "Switzerland",
+    "position": "FW",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "210047",
+    "player_name": "Fabian Schär",
+    "team": "Switzerland",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "209499",
+    "player_name": "Fabinho",
+    "team": "Brazil",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "253283",
+    "player_name": "Facundo Pellistri",
+    "team": "Uruguay",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "256136",
+    "player_name": "Facundo Torres",
+    "team": "Uruguay",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "223283",
+    "player_name": "Famara Diedhiou",
+    "team": "Senegal",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "239053",
+    "player_name": "Federico Valverde",
+    "team": "Uruguay",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "218215",
+    "player_name": "Ferjani Sassi",
+    "team": "Tunisia",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "182494",
+    "player_name": "Fernando Muslera",
+    "team": "Uruguay",
+    "position": "GK",
+    "birth_year": 1986
+  },
+  {
+    "sofifa_id": "256136",
+    "player_name": "Ferrán Torres",
+    "team": "Spain",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "208574",
+    "player_name": "Filip Kostić",
+    "team": "Serbia",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "221969",
+    "player_name": "Filip Mladenović",
+    "team": "Serbia",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "193881",
+    "player_name": "Filip Đuričić",
+    "team": "Serbia",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "238545",
+    "player_name": "Firas Al-Buraikan",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "236723",
+    "player_name": "Fodé Ballo-Touré",
+    "team": "Senegal",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "228618",
+    "player_name": "Formose Mendy",
+    "team": "Senegal",
+    "position": "DF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "243473",
+    "player_name": "Fran Karačić",
+    "team": "Australia",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "213064",
+    "player_name": "Francisco Calvo",
+    "team": "Costa Rica",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "214584",
+    "player_name": "Franco Armani",
+    "team": "Argentina",
+    "position": "GK",
+    "birth_year": 1986
+  },
+  {
+    "sofifa_id": "209297",
+    "player_name": "Fred",
+    "team": "Brazil",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "201269",
+    "player_name": "Frederik Rønnow",
+    "team": "Denmark",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "228702",
+    "player_name": "Frenkie de Jong",
+    "team": "Netherlands",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "175254",
+    "player_name": "Félix Torres Caicedo",
+    "team": "Ecuador",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "230666",
+    "player_name": "Gabriel Jesus",
+    "team": "Brazil",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "232883",
+    "player_name": "Gaku Shibasaki",
+    "team": "Japan",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "268460",
+    "player_name": "Garang Kuol",
+    "team": "Australia",
+    "position": "FW",
+    "birth_year": 2004
+  },
+  {
+    "sofifa_id": "173731",
+    "player_name": "Gareth Bale",
+    "team": "Wales",
+    "position": "FW",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "264240",
+    "player_name": "Gavi",
+    "team": "Spain",
+    "position": "MF",
+    "birth_year": 2004
+  },
+  {
+    "sofifa_id": "245017",
+    "player_name": "Gaël Ondoua",
+    "team": "Cameroon",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "219732",
+    "player_name": "Georges-Kévin N'Koudou",
+    "team": "Cameroon",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "236537",
+    "player_name": "Gerardo Arteaga",
+    "team": "Mexico",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "193601",
+    "player_name": "Germán Pezzella",
+    "team": "Argentina",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "174754",
+    "player_name": "Gerson Torres",
+    "team": "Costa Rica",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "215316",
+    "player_name": "Gerónimo Rulli",
+    "team": "Argentina",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "241757",
+    "player_name": "Ghaylène Chaalali",
+    "team": "Tunisia",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "247124",
+    "player_name": "Gideon Mensah",
+    "team": "Ghana",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "245541",
+    "player_name": "Gio Reyna",
+    "team": "United States",
+    "position": "FW",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "225645",
+    "player_name": "Giorgian De Arrascaeta",
+    "team": "Uruguay",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "239580",
+    "player_name": "Gleison Bremer",
+    "team": "Brazil",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "231340",
+    "player_name": "Gonzalo Montiel",
+    "team": "Argentina",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "247181",
+    "player_name": "Gonzalo Plata",
+    "team": "Ecuador",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "256903",
+    "player_name": "Gonçalo Ramos",
+    "team": "Portugal",
+    "position": "FW",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "199503",
+    "player_name": "Granit Xhaka",
+    "team": "Switzerland",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "235073",
+    "player_name": "Gregor Kobel",
+    "team": "Switzerland",
+    "position": "GK",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "197242",
+    "player_name": "Grzegorz Krychowiak",
+    "team": "Poland",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "225659",
+    "player_name": "Guido Rodríguez",
+    "team": "Argentina",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "140233",
+    "player_name": "Guillermo Ochoa",
+    "team": "Mexico",
+    "position": "GK",
+    "birth_year": 1985
+  },
+  {
+    "sofifa_id": "12063042",
+    "player_name": "Guillermo Varela",
+    "team": "Uruguay",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "238743",
+    "player_name": "Haji Wright",
+    "team": "United States",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "208670",
+    "player_name": "Hakim Ziyech",
+    "team": "Morocco",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "258171",
+    "player_name": "Hannibal Mejbri",
+    "team": "Tunisia",
+    "position": "MF",
+    "birth_year": 2003
+  },
+  {
+    "sofifa_id": "200155",
+    "player_name": "Hans Vanaken",
+    "team": "Belgium",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "193408",
+    "player_name": "Haris Seferović",
+    "team": "Switzerland",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "202126",
+    "player_name": "Harry Kane",
+    "team": "England",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "203263",
+    "player_name": "Harry Maguire",
+    "team": "England",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "229901",
+    "player_name": "Harry Souttar",
+    "team": "Australia",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "220710",
+    "player_name": "Harry Wilson",
+    "team": "Wales",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "245751",
+    "player_name": "Hassan Al Tambakti",
+    "team": "Saudi Arabia",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "180561",
+    "player_name": "Hassan Al-Haydos",
+    "team": "Qatar",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "208974",
+    "player_name": "Hattan Bahebri",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "224151",
+    "player_name": "Henry Martín",
+    "team": "Mexico",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "253354",
+    "player_name": "Hernán Galíndez",
+    "team": "Ecuador",
+    "position": "GK",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "242087",
+    "player_name": "Hidemasa Morita",
+    "team": "Japan",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "234205",
+    "player_name": "Hiroki Ito",
+    "team": "Japan",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "208520",
+    "player_name": "Hiroki Sakai",
+    "team": "Japan",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "221992",
+    "player_name": "Hirving Lozano",
+    "team": "Mexico",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "268776",
+    "player_name": "Homam Ahmed",
+    "team": "Qatar",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "199236",
+    "player_name": "Hong Chul",
+    "team": "Korea Republic",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "15464554",
+    "player_name": "Hossein Hosseini",
+    "team": "IR Iran",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "241782",
+    "player_name": "Hossein Kanaanizadegan",
+    "team": "IR Iran",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "246352",
+    "player_name": "Hugo Guillamón",
+    "team": "Spain",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "167948",
+    "player_name": "Hugo Lloris",
+    "team": "France",
+    "position": "GK",
+    "birth_year": 1986
+  },
+  {
+    "sofifa_id": "226380",
+    "player_name": "Hwang Hee-chan",
+    "team": "Korea Republic",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "228010",
+    "player_name": "Hwang In-beom",
+    "team": "Korea Republic",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "212260",
+    "player_name": "Hwang Ui-jo",
+    "team": "Korea Republic",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "156519",
+    "player_name": "Héctor Herrera",
+    "team": "Mexico",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "173432",
+    "player_name": "Héctor Moreno",
+    "team": "Mexico",
+    "position": "DF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "237678",
+    "player_name": "Ibrahima Konaté",
+    "team": "France",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "193474",
+    "player_name": "Idrissa Gana Gueye",
+    "team": "Senegal",
+    "position": "MF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "233045",
+    "player_name": "Ike Ugbo",
+    "team": "Canada",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "238490",
+    "player_name": "Ilias Chair",
+    "team": "Morocco",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "252523",
+    "player_name": "Iliman Ndiaye",
+    "team": "Senegal",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "252293",
+    "player_name": "Ismail Jakobs",
+    "team": "Senegal",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "268774",
+    "player_name": "Ismail Mohamad",
+    "team": "Qatar",
+    "position": "FW",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "235353",
+    "player_name": "Ismaila Sarr",
+    "team": "Senegal",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "242893",
+    "player_name": "Ismaël Koné",
+    "team": "Canada",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "235236",
+    "player_name": "Issam Jebali",
+    "team": "Tunisia",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "258683",
+    "player_name": "Ivan Ilić",
+    "team": "Serbia",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "181458",
+    "player_name": "Ivan Perišić",
+    "team": "Croatia",
+    "position": "FW",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "242288",
+    "player_name": "Ivica Ivušić",
+    "team": "Croatia",
+    "position": "GK",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "258390",
+    "player_name": "Ivo Grbić",
+    "team": "Croatia",
+    "position": "GK",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "216201",
+    "player_name": "Iñaki Williams",
+    "team": "Ghana",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "206517",
+    "player_name": "Jack Grealish",
+    "team": "England",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "211378",
+    "player_name": "Jackson Irvine",
+    "team": "Australia",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "260740",
+    "player_name": "Jackson Porozo",
+    "team": "Ecuador",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "252495",
+    "player_name": "Jakub Kamiński",
+    "team": "Poland",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "265693",
+    "player_name": "Jakub Kiwior",
+    "team": "Poland",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "256790",
+    "player_name": "Jamal Musiala",
+    "team": "Germany",
+    "position": "MF",
+    "birth_year": 2003
+  },
+  {
+    "sofifa_id": "220697",
+    "player_name": "James Maddison",
+    "team": "England",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "238919",
+    "player_name": "James Pantemis",
+    "team": "Canada",
+    "position": "GK",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "212232",
+    "player_name": "Jamie Maclaren",
+    "team": "Australia",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "220570",
+    "player_name": "Jan Bednarek",
+    "team": "Poland",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "172871",
+    "player_name": "Jan Vertonghen",
+    "team": "Belgium",
+    "position": "DF",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "219948",
+    "player_name": "Jason Cummings",
+    "team": "Australia",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "268982",
+    "player_name": "Jassem Gaber",
+    "team": "Qatar",
+    "position": "DF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "241775",
+    "player_name": "Jawad El Yamiq",
+    "team": "Morocco",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "213868",
+    "player_name": "Jean-Charles Castelletto",
+    "team": "Cameroon",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "209973",
+    "player_name": "Jean-Pierre Nsame",
+    "team": "Cameroon",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "193133",
+    "player_name": "Jens Stryger Larsen",
+    "team": "Denmark",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "239138",
+    "player_name": "Jeong Woo-yeong",
+    "team": "Korea Republic",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "253149",
+    "player_name": "Jeremie Frimpong",
+    "team": "Netherlands",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "246420",
+    "player_name": "Jeremy Doku",
+    "team": "Belgium",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "263522",
+    "player_name": "Jeremy Sarmiento",
+    "team": "Ecuador",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "272540",
+    "player_name": "Jerome Ngom Mbekeli",
+    "team": "Cameroon",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "245741",
+    "player_name": "Jesper Lindstrøm",
+    "team": "Denmark",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "241487",
+    "player_name": "Jesús Ferreira",
+    "team": "United States",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "226045",
+    "player_name": "Jesús Gallardo",
+    "team": "Mexico",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "268709",
+    "player_name": "Jewison Bennette",
+    "team": "Costa Rica",
+    "position": "MF",
+    "birth_year": 2004
+  },
+  {
+    "sofifa_id": "241927",
+    "player_name": "Jhegson Méndez",
+    "team": "Ecuador",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "224221",
+    "player_name": "Joachim Andersen",
+    "team": "Denmark",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "234678",
+    "player_name": "Joakim Mæhle",
+    "team": "Denmark",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "184716",
+    "player_name": "Joe Allen",
+    "team": "Wales",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "220677",
+    "player_name": "Joe Morrell",
+    "team": "Wales",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "229266",
+    "player_name": "Joe Rodon",
+    "team": "Wales",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "243133",
+    "player_name": "Joe Scally",
+    "team": "United States",
+    "position": "DF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "204713",
+    "player_name": "Joel Campbell",
+    "team": "Costa Rica",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "185422",
+    "player_name": "Joel King",
+    "team": "Australia",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "255956",
+    "player_name": "Joel Waterman",
+    "team": "Canada",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "229996",
+    "player_name": "Johan Venegas",
+    "team": "Costa Rica",
+    "position": "FW",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "244349",
+    "player_name": "Johan Vásquez",
+    "team": "Mexico",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "203574",
+    "player_name": "John Stones",
+    "team": "England",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "210324",
+    "player_name": "Jonas Hofmann",
+    "team": "Germany",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "223550",
+    "player_name": "Jonas Omlin",
+    "team": "Switzerland",
+    "position": "GK",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "241522",
+    "player_name": "Jonas Wind",
+    "team": "Denmark",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "243630",
+    "player_name": "Jonathan David",
+    "team": "Canada",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "213439",
+    "player_name": "Jonathan Osorio",
+    "team": "Canada",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "224265",
+    "player_name": "Jonny Williams",
+    "team": "Wales",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "197756",
+    "player_name": "Jordan Ayew",
+    "team": "Ghana",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "183711",
+    "player_name": "Jordan Henderson",
+    "team": "England",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "226035",
+    "player_name": "Jordan Morris",
+    "team": "United States",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "204935",
+    "player_name": "Jordan Pickford",
+    "team": "England",
+    "position": "GK",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "201519",
+    "player_name": "Jordan Veretout",
+    "team": "France",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "189332",
+    "player_name": "Jordi Alba",
+    "team": "Spain",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "233493",
+    "player_name": "Jorge Eduardo Sánchez",
+    "team": "Mexico",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "230021",
+    "player_name": "Joseph Aidoo",
+    "team": "Ghana",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "242075",
+    "player_name": "Josh Sargent",
+    "team": "United States",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "212622",
+    "player_name": "Joshua Kimmich",
+    "team": "Germany",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "257771",
+    "player_name": "Josip Juranović",
+    "team": "Croatia",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "250955",
+    "player_name": "Josip Stanišić",
+    "team": "Croatia",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "256325",
+    "player_name": "Josip Šutalo",
+    "team": "Croatia",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "255137",
+    "player_name": "José Cifuentes",
+    "team": "Ecuador",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "251663",
+    "player_name": "José Luis Rodríguez Bebanz",
+    "team": "Uruguay",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "216460",
+    "player_name": "José María Giménez",
+    "team": "Uruguay",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "233493",
+    "player_name": "José Sá",
+    "team": "Portugal",
+    "position": "GK",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "210514",
+    "player_name": "João Cancelo",
+    "team": "Portugal",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "242444",
+    "player_name": "João Félix",
+    "team": "Portugal",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "212814",
+    "player_name": "João Mário",
+    "team": "Portugal",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "229391",
+    "player_name": "João Palhinha",
+    "team": "Portugal",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "251517",
+    "player_name": "Joško Gvardiol",
+    "team": "Croatia",
+    "position": "DF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "237221",
+    "player_name": "Juan Foyth",
+    "team": "Argentina",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "226266",
+    "player_name": "Juan Pablo Vargas",
+    "team": "Costa Rica",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "252371",
+    "player_name": "Jude Bellingham",
+    "team": "England",
+    "position": "MF",
+    "birth_year": 2003
+  },
+  {
+    "sofifa_id": "241486",
+    "player_name": "Jules Koundé",
+    "team": "France",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "212194",
+    "player_name": "Julian Brandt",
+    "team": "Germany",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "246191",
+    "player_name": "Julián Álvarez",
+    "team": "Argentina",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "211003",
+    "player_name": "Jung Woo-young",
+    "team": "Korea Republic",
+    "position": "MF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "189462",
+    "player_name": "Junior Hoilett",
+    "team": "Canada",
+    "position": "FW",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "232905",
+    "player_name": "Junya Ito",
+    "team": "Japan",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "251805",
+    "player_name": "Jurriën Timber",
+    "team": "Netherlands",
+    "position": "DF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "232229",
+    "player_name": "Justin Bijlow",
+    "team": "Netherlands",
+    "position": "GK",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "235790",
+    "player_name": "Kai Havertz",
+    "team": "Germany",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "201024",
+    "player_name": "Kalidou Koulibaly",
+    "team": "Senegal",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "224081",
+    "player_name": "Kalvin Phillips",
+    "team": "England",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "247648",
+    "player_name": "Kamal Miller",
+    "team": "Canada",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "244853",
+    "player_name": "Kamal Sowah",
+    "team": "Ghana",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "256035",
+    "player_name": "Kamaldeen Sulemana",
+    "team": "Ghana",
+    "position": "FW",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "190547",
+    "player_name": "Kamil Glik",
+    "team": "Poland",
+    "position": "DF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "228383",
+    "player_name": "Kamil Grabara",
+    "team": "Poland",
+    "position": "GK",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "177922",
+    "player_name": "Kamil Grosicki",
+    "team": "Poland",
+    "position": "MF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "255565",
+    "player_name": "Kaoru Mitoma",
+    "team": "Japan",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "251852",
+    "player_name": "Karim Adeyemi",
+    "team": "Germany",
+    "position": "FW",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "197136",
+    "player_name": "Karim Ansarifard",
+    "team": "IR Iran",
+    "position": "FW",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "268778",
+    "player_name": "Karim Boudiaf",
+    "team": "Qatar",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "224069",
+    "player_name": "Karl Toko Ekambi",
+    "team": "Cameroon",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "224301",
+    "player_name": "Karol Świderski",
+    "team": "Poland",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "228687",
+    "player_name": "Kasper Dolberg",
+    "team": "Denmark",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "163587",
+    "player_name": "Kasper Schmeichel",
+    "team": "Denmark",
+    "position": "GK",
+    "birth_year": 1986
+  },
+  {
+    "sofifa_id": "237005",
+    "player_name": "Keanu Baccus",
+    "team": "Australia",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "213209",
+    "player_name": "Kellyn Acosta",
+    "team": "United States",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "216811",
+    "player_name": "Kendall Waston",
+    "team": "Costa Rica",
+    "position": "DF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "255009",
+    "player_name": "Kenneth Taylor",
+    "team": "Netherlands",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "192985",
+    "player_name": "Kevin De Bruyne",
+    "team": "Belgium",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "272569",
+    "player_name": "Kevin Rodríguez",
+    "team": "Ecuador",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "188943",
+    "player_name": "Kevin Trapp",
+    "team": "Germany",
+    "position": "GK",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "253008",
+    "player_name": "Kevin Álvarez",
+    "team": "Mexico",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "193041",
+    "player_name": "Keylor Navas",
+    "team": "Costa Rica",
+    "position": "GK",
+    "birth_year": 1986
+  },
+  {
+    "sofifa_id": "268702",
+    "player_name": "Keysher Fuller",
+    "team": "Costa Rica",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "270643",
+    "player_name": "Khalid Muneer",
+    "team": "Qatar",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "216627",
+    "player_name": "Kieffer Moore",
+    "team": "Wales",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "186345",
+    "player_name": "Kieran Trippier",
+    "team": "England",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "213317",
+    "player_name": "Kim Jin-su",
+    "team": "Korea Republic",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "237086",
+    "player_name": "Kim Min-jae",
+    "team": "Korea Republic",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "244800",
+    "player_name": "Kim Moonhwan",
+    "team": "Korea Republic",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "191655",
+    "player_name": "Kim Seung-gyu",
+    "team": "Korea Republic",
+    "position": "GK",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "199231",
+    "player_name": "Kim Tae-hwan",
+    "team": "Korea Republic",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "201528",
+    "player_name": "Kim Young-gwon",
+    "team": "Korea Republic",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "213345",
+    "player_name": "Kingsley Coman",
+    "team": "France",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "233152",
+    "player_name": "Ko Itakura",
+    "team": "Japan",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "192984",
+    "player_name": "Koen Casteels",
+    "team": "Belgium",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "193747",
+    "player_name": "Koke",
+    "team": "Spain",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "257889",
+    "player_name": "Kristijan Jakić",
+    "team": "Croatia",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "224763",
+    "player_name": "Krystian Bielik",
+    "team": "Poland",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "223113",
+    "player_name": "Krzysztof Piątek",
+    "team": "Poland",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "238227",
+    "player_name": "Krépin Diatta",
+    "team": "Senegal",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "245155",
+    "player_name": "Kudus Mohammed",
+    "team": "Ghana",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "211927",
+    "player_name": "Kwon Chang-hoon",
+    "team": "Korea Republic",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "212778",
+    "player_name": "Kwon Kyung-won",
+    "team": "Korea Republic",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "233931",
+    "player_name": "Kye Rowles",
+    "team": "Australia",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "188377",
+    "player_name": "Kyle Walker",
+    "team": "England",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "231747",
+    "player_name": "Kylian Mbappé",
+    "team": "France",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "231478",
+    "player_name": "Lautaro Martínez",
+    "team": "Argentina",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "229956",
+    "player_name": "Lawrence Ati-Zigi",
+    "team": "Ghana",
+    "position": "GK",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "212501",
+    "player_name": "Leander Dendoncker",
+    "team": "Belgium",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "207439",
+    "player_name": "Leandro Paredes",
+    "team": "Argentina",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "207421",
+    "player_name": "Leandro Trossard",
+    "team": "Belgium",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "221671",
+    "player_name": "Lee Jae-sung",
+    "team": "Korea Republic",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "243780",
+    "player_name": "Lee Kangin",
+    "team": "Korea Republic",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "209658",
+    "player_name": "Leon Goretzka",
+    "team": "Germany",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "222492",
+    "player_name": "Leroy Sané",
+    "team": "Germany",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "242643",
+    "player_name": "Liam Fraser",
+    "team": "Canada",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "240925",
+    "player_name": "Liam Millar",
+    "team": "Canada",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "158023",
+    "player_name": "Lionel Messi",
+    "team": "Argentina",
+    "position": "FW",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "231478",
+    "player_name": "Lisandro Martínez",
+    "team": "Argentina",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "244261",
+    "player_name": "Lovro Majer",
+    "team": "Croatia",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "243580",
+    "player_name": "Loïs Openda",
+    "team": "Belgium",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "223959",
+    "player_name": "Luca de la Torre",
+    "team": "United States",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "213095",
+    "player_name": "Lucas Cavallini",
+    "team": "Canada",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "220814",
+    "player_name": "Lucas Hernández",
+    "team": "France",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "233927",
+    "player_name": "Lucas Paquetá",
+    "team": "Brazil",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "223959",
+    "player_name": "Lucas Torreira",
+    "team": "Uruguay",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "222382",
+    "player_name": "Luis Chávez",
+    "team": "Mexico",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "243015",
+    "player_name": "Luis Romo",
+    "team": "Mexico",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "176580",
+    "player_name": "Luis Suárez",
+    "team": "Uruguay",
+    "position": "FW",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "232432",
+    "player_name": "Luka Jović",
+    "team": "Serbia",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "177003",
+    "player_name": "Luka Modrić",
+    "team": "Croatia",
+    "position": "MF",
+    "birth_year": 1985
+  },
+  {
+    "sofifa_id": "258775",
+    "player_name": "Luka Sučić",
+    "team": "Croatia",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "222331",
+    "player_name": "Lukas Klostermann",
+    "team": "Germany",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "205988",
+    "player_name": "Luke Shaw",
+    "team": "England",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "259313",
+    "player_name": "Luuk de Jong",
+    "team": "Netherlands",
+    "position": "FW",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "243549",
+    "player_name": "Majid Hosseini",
+    "team": "IR Iran",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "245021",
+    "player_name": "Mamadou Loum",
+    "team": "Senegal",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "239076",
+    "player_name": "Manaf Nurudeen",
+    "team": "Ghana",
+    "position": "GK",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "229237",
+    "player_name": "Manuel Akanji",
+    "team": "Switzerland",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "167495",
+    "player_name": "Manuel Neuer",
+    "team": "Germany",
+    "position": "GK",
+    "birth_year": 1986
+  },
+  {
+    "sofifa_id": "253306",
+    "player_name": "Manuel Ugarte Ribeiro",
+    "team": "Uruguay",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "192448",
+    "player_name": "Marc-André ter Stegen",
+    "team": "Germany",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "216352",
+    "player_name": "Marcelo Brozović",
+    "team": "Croatia",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "220834",
+    "player_name": "Marco Asensio",
+    "team": "Spain",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "246009",
+    "player_name": "Marco Tilio",
+    "team": "Australia",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "224334",
+    "player_name": "Marcos Acuña",
+    "team": "Argentina",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "226161%3Fprofile%3Dnew",
+    "player_name": "Marcos Llorente",
+    "team": "Spain",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "231677",
+    "player_name": "Marcus Rashford",
+    "team": "England",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "228093",
+    "player_name": "Marcus Thuram",
+    "team": "France",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "192318",
+    "player_name": "Mario Götze",
+    "team": "Germany",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "223273",
+    "player_name": "Mario Pašalić",
+    "team": "Croatia",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "237833",
+    "player_name": "Mark Harris",
+    "team": "Wales",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "238922",
+    "player_name": "Mark-Anthony Kaye",
+    "team": "Canada",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "227290",
+    "player_name": "Marko Dmitrović",
+    "team": "Serbia",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "232099",
+    "player_name": "Marko Grujić",
+    "team": "Serbia",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "205855",
+    "player_name": "Marko Livaja",
+    "team": "Croatia",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "272539",
+    "player_name": "Marou Souaibou",
+    "team": "Cameroon",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "207865",
+    "player_name": "Marquinhos",
+    "team": "Brazil",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "208461",
+    "player_name": "Marten de Roon",
+    "team": "Netherlands",
+    "position": "MF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "193290",
+    "player_name": "Martin Braithwaite",
+    "team": "Denmark",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "244456",
+    "player_name": "Martin Erlic",
+    "team": "Croatia",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "236556",
+    "player_name": "Martin Hongla",
+    "team": "Cameroon",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "251566",
+    "player_name": "Martinelli",
+    "team": "Brazil",
+    "position": "FW",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "182495",
+    "player_name": "Martín Cáceres",
+    "team": "Uruguay",
+    "position": "DF",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "233064",
+    "player_name": "Mason Mount",
+    "team": "England",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "207410",
+    "player_name": "Mateo Kovačić",
+    "team": "Croatia",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "224302",
+    "player_name": "Mateusz Wieteska",
+    "team": "Poland",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "253124",
+    "player_name": "Matheus Nunes",
+    "team": "Portugal",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "195033",
+    "player_name": "Mathew Leckie",
+    "team": "Australia",
+    "position": "MF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "199005",
+    "player_name": "Mathew Ryan",
+    "team": "Australia",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "229723",
+    "player_name": "Mathias Jensen",
+    "team": "Denmark",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "240716",
+    "player_name": "Mathías Olivera",
+    "team": "Uruguay",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "233267",
+    "player_name": "Matt Turner",
+    "team": "United States",
+    "position": "GK",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "190583",
+    "player_name": "Matthew Smith",
+    "team": "Wales",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "207862",
+    "player_name": "Matthias Ginter",
+    "team": "Germany",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "235243",
+    "player_name": "Matthijs de Ligt",
+    "team": "Netherlands",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "227174",
+    "player_name": "Matty Cash",
+    "team": "Poland",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "236496",
+    "player_name": "Mattéo Guendouzi",
+    "team": "France",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "219985",
+    "player_name": "Matías Vecino",
+    "team": "Uruguay",
+    "position": "MF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "253290",
+    "player_name": "Matías Viña",
+    "team": "Uruguay",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "239207",
+    "player_name": "Maxi Gómez",
+    "team": "Uruguay",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "191648",
+    "player_name": "Maya Yoshida",
+    "team": "Japan",
+    "position": "DF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "241788",
+    "player_name": "Mehdi Taremi",
+    "team": "IR Iran",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "14453628",
+    "player_name": "Mehdi Torabi",
+    "team": "IR Iran",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "202556",
+    "player_name": "Memphis",
+    "team": "Netherlands",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "268783",
+    "player_name": "Meshaal Barsham",
+    "team": "Qatar",
+    "position": "GK",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "240944",
+    "player_name": "Michael Estrada",
+    "team": "Ecuador",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "251633",
+    "player_name": "Michał Skóraś",
+    "team": "Poland",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "236898",
+    "player_name": "Michel Aebischer",
+    "team": "Switzerland",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "204529",
+    "player_name": "Michy Batshuayi",
+    "team": "Belgium",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "233169",
+    "player_name": "Miki Yamane",
+    "team": "Japan",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "241508",
+    "player_name": "Mikkel Damsgaard",
+    "team": "Denmark",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "233218",
+    "player_name": "Milad Mohammadi",
+    "team": "IR Iran",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "205211",
+    "player_name": "Milan Borjan",
+    "team": "Canada",
+    "position": "GK",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "229585",
+    "player_name": "Miloš Degenek",
+    "team": "Australia",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "221354",
+    "player_name": "Miloš Veljković",
+    "team": "Serbia",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "221174",
+    "player_name": "Mislav Oršić",
+    "team": "Croatia",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "209885",
+    "player_name": "Mitchell Duke",
+    "team": "Australia",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "268822",
+    "player_name": "Mohamed Ali Ben Romdhane",
+    "team": "Tunisia",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "242041",
+    "player_name": "Mohamed Dräger",
+    "team": "Tunisia",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "220075",
+    "player_name": "Mohamed Kanno",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "271636",
+    "player_name": "Mohammed Al Yami",
+    "team": "Saudi Arabia",
+    "position": "GK",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "221370",
+    "player_name": "Mohammed Al-Breik",
+    "team": "Saudi Arabia",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "210923",
+    "player_name": "Mohammed Al-Owais",
+    "team": "Saudi Arabia",
+    "position": "GK",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "268780",
+    "player_name": "Mohammed Muntari",
+    "team": "Qatar",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "244915",
+    "player_name": "Mohammed Salisu",
+    "team": "Ghana",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "268775",
+    "player_name": "Mohammed Waad",
+    "team": "Qatar",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "218976",
+    "player_name": "Moisés Caicedo",
+    "team": "Ecuador",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "261275",
+    "player_name": "Moisés Ramírez",
+    "team": "Ecuador",
+    "position": "GK",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "245410",
+    "player_name": "Montassar Talbi",
+    "team": "Tunisia",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "227921",
+    "player_name": "Morteza Pouraliganji",
+    "team": "IR Iran",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "279194",
+    "player_name": "Mostafa Meshaal",
+    "team": "Qatar",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "209483",
+    "player_name": "Mouez Hassen",
+    "team": "Tunisia",
+    "position": "GK",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "15037294",
+    "player_name": "Moumi Ngamaleu",
+    "team": "Cameroon",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "263282",
+    "player_name": "Moussa N'Diaye",
+    "team": "Senegal",
+    "position": "DF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "256692",
+    "player_name": "Moustapha Name",
+    "team": "Senegal",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "220253",
+    "player_name": "Munir",
+    "team": "Morocco",
+    "position": "GK",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "268784",
+    "player_name": "Musab Kheder",
+    "team": "Qatar",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "238097",
+    "player_name": "Na Sang-ho",
+    "team": "Korea Republic",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "15778502",
+    "player_name": "Nader Ghandri",
+    "team": "Tunisia",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "233084",
+    "player_name": "Nahuel Molina",
+    "team": "Argentina",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "272470",
+    "player_name": "Naif Al-Hadhrami",
+    "team": "Qatar",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "198861",
+    "player_name": "Nampalys Mendy",
+    "team": "Senegal",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "241938",
+    "player_name": "Nasser Al-Dawsari",
+    "team": "Saudi Arabia",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "208920",
+    "player_name": "Nathan Aké",
+    "team": "Netherlands",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "241861",
+    "player_name": "Nathaniel Atkinson",
+    "team": "Australia",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "208949",
+    "player_name": "Nawaf Al Abed",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "255368",
+    "player_name": "Nawaf Al Aqidi",
+    "team": "Saudi Arabia",
+    "position": "GK",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "244749",
+    "player_name": "Nayef Aguerd",
+    "team": "Morocco",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "205257",
+    "player_name": "Naïm Sliti",
+    "team": "Tunisia",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "243057",
+    "player_name": "Neco Williams",
+    "team": "Wales",
+    "position": "DF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "193198",
+    "player_name": "Nemanja Gudelj",
+    "team": "Serbia",
+    "position": "MF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "239433",
+    "player_name": "Nemanja Maksimović",
+    "team": "Serbia",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "243656",
+    "player_name": "Nemanja Radonjić",
+    "team": "Serbia",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "190871",
+    "player_name": "Neymar",
+    "team": "Brazil",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "203841",
+    "player_name": "Nick Pope",
+    "team": "England",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "205431",
+    "player_name": "Niclas Füllkrug",
+    "team": "Germany",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "221491",
+    "player_name": "Nico Elvedi",
+    "team": "Switzerland",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "247819",
+    "player_name": "Nico Schlotterbeck",
+    "team": "Germany",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "243057",
+    "player_name": "Nico Williams",
+    "team": "Spain",
+    "position": "FW",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "262113",
+    "player_name": "Nicola Zalewski",
+    "team": "Poland",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "259197",
+    "player_name": "Nicolas Jackson",
+    "team": "Senegal",
+    "position": "FW",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "188829",
+    "player_name": "Nicolas Nkoulou",
+    "team": "Cameroon",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "15867587",
+    "player_name": "Nicolás De La Cruz",
+    "team": "Uruguay",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "192366",
+    "player_name": "Nicolás Otamendi",
+    "team": "Argentina",
+    "position": "DF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "211256",
+    "player_name": "Nicolás Tagliafico",
+    "team": "Argentina",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "212190",
+    "player_name": "Niklas Süle",
+    "team": "Germany",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "238095",
+    "player_name": "Nikola Milenković",
+    "team": "Serbia",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "241095",
+    "player_name": "Nikola Vlašić",
+    "team": "Croatia",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "239380",
+    "player_name": "Noa Lang",
+    "team": "Netherlands",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "242530",
+    "player_name": "Noah Okafor",
+    "team": "Switzerland",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "237469",
+    "player_name": "Nouhou Tolo",
+    "team": "Cameroon",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "236401",
+    "player_name": "Noussair Mazraoui",
+    "team": "Morocco",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "252145",
+    "player_name": "Nuno Mendes",
+    "team": "Portugal",
+    "position": "DF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "13738514",
+    "player_name": "Néstor Araujo",
+    "team": "Mexico",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "236758",
+    "player_name": "Oliver Christensen",
+    "team": "Denmark",
+    "position": "GK",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "178509",
+    "player_name": "Olivier Giroud",
+    "team": "France",
+    "position": "FW",
+    "birth_year": 1986
+  },
+  {
+    "sofifa_id": "243235",
+    "player_name": "Olivier Mbaizo",
+    "team": "Cameroon",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "218745",
+    "player_name": "Olivier Ntcham",
+    "team": "Cameroon",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "224574",
+    "player_name": "Orbelín Pineda",
+    "team": "Mexico",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "258608",
+    "player_name": "Osman Bukari",
+    "team": "Ghana",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "275070",
+    "player_name": "Otávio",
+    "team": "Portugal",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "231443",
+    "player_name": "Ousmane Dembélé",
+    "team": "France",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "198950",
+    "player_name": "Pablo Sarabia",
+    "team": "Spain",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "237424",
+    "player_name": "Paik Seung-ho",
+    "team": "Korea Republic",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "228386",
+    "player_name": "Pape Abou Cissé",
+    "team": "Senegal",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "241707",
+    "player_name": "Pape Gueye",
+    "team": "Senegal",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "259868",
+    "player_name": "Pape Matar Sarr",
+    "team": "Senegal",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "244643",
+    "player_name": "Papu Gómez",
+    "team": "Argentina",
+    "position": "MF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "228386",
+    "player_name": "Pathé Ciss",
+    "team": "Senegal",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "270054",
+    "player_name": "Patrick Sequeira",
+    "team": "Costa Rica",
+    "position": "GK",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "241464",
+    "player_name": "Pau Torres",
+    "team": "Spain",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "211110",
+    "player_name": "Paulo Dybala",
+    "team": "Argentina",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "263238",
+    "player_name": "Payam Niazmand",
+    "team": "IR Iran",
+    "position": "GK",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "251854",
+    "player_name": "Pedri",
+    "team": "Spain",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "189505",
+    "player_name": "Pedro",
+    "team": "Brazil",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "226110",
+    "player_name": "Pepe",
+    "team": "Portugal",
+    "position": "DF",
+    "birth_year": 1983
+  },
+  {
+    "sofifa_id": "237942",
+    "player_name": "Pervis Estupiñán",
+    "team": "Ecuador",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "237692",
+    "player_name": "Phil Foden",
+    "team": "England",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "239364",
+    "player_name": "Philipp Köhn",
+    "team": "Switzerland",
+    "position": "GK",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "256197",
+    "player_name": "Piero Hincapié",
+    "team": "Ecuador",
+    "position": "DF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "213648",
+    "player_name": "Pierre Højbjerg",
+    "team": "Denmark",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "240190",
+    "player_name": "Pierre Kunde",
+    "team": "Cameroon",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "210406",
+    "player_name": "Piotr Zieliński",
+    "team": "Poland",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "241727",
+    "player_name": "Predrag Rajković",
+    "team": "Serbia",
+    "position": "GK",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "212138",
+    "player_name": "Przemysław Frankowski",
+    "team": "Poland",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "241721",
+    "player_name": "Rafael Leão",
+    "team": "Portugal",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "202652",
+    "player_name": "Raheem Sterling",
+    "team": "England",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "15389267",
+    "player_name": "Ramin Rezaeian",
+    "team": "IR Iran",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "237679",
+    "player_name": "Randal Kolo Muani",
+    "team": "France",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "209889",
+    "player_name": "Raphaël Guerreiro",
+    "team": "Portugal",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "201535",
+    "player_name": "Raphaël Varane",
+    "team": "France",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "233419",
+    "player_name": "Raphinha",
+    "team": "Brazil",
+    "position": "FW",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "233301",
+    "player_name": "Rasmus Nissen",
+    "team": "Denmark",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "204838",
+    "player_name": "Raúl Jiménez",
+    "team": "Mexico",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "162328",
+    "player_name": "Remko Pasveer",
+    "team": "Netherlands",
+    "position": "GK",
+    "birth_year": 1983
+  },
+  {
+    "sofifa_id": "202024",
+    "player_name": "Remo Freuler",
+    "team": "Switzerland",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "210537",
+    "player_name": "Renato Steffen",
+    "team": "Switzerland",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "213516",
+    "player_name": "Ricardo Horta",
+    "team": "Portugal",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "193352",
+    "player_name": "Ricardo Rodríguez",
+    "team": "Switzerland",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "231943",
+    "player_name": "Richarlison",
+    "team": "Brazil",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "232081",
+    "player_name": "Richie Laryea",
+    "team": "Canada",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "233487",
+    "player_name": "Riley McGree",
+    "team": "Australia",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "232639",
+    "player_name": "Ritsu Doan",
+    "team": "Japan",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "229800",
+    "player_name": "Riyadh Sharahili",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "272483",
+    "player_name": "Roan Wilson",
+    "team": "Costa Rica",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "12255942",
+    "player_name": "Robert Arboleda",
+    "team": "Ecuador",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "233409",
+    "player_name": "Robert Gumny",
+    "team": "Poland",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "188545",
+    "player_name": "Robert Lewandowski",
+    "team": "Poland",
+    "position": "FW",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "215449",
+    "player_name": "Robert Skov",
+    "team": "Denmark",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "248872",
+    "player_name": "Robert Sánchez",
+    "team": "Spain",
+    "position": "GK",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "237043",
+    "player_name": "Roberto Alvarado",
+    "team": "Mexico",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "186098",
+    "player_name": "Rodolfo Cota",
+    "team": "Mexico",
+    "position": "GK",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "231866",
+    "player_name": "Rodri",
+    "team": "Spain",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "227535",
+    "player_name": "Rodrigo Bentancur",
+    "team": "Uruguay",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "212616",
+    "player_name": "Rodrigo De Paul",
+    "team": "Argentina",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "243812",
+    "player_name": "Rodrygo",
+    "team": "Brazil",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "232294",
+    "player_name": "Rogelio Funes Mori",
+    "team": "Mexico",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "208295",
+    "player_name": "Romain Saïss",
+    "team": "Morocco",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "204738",
+    "player_name": "Romario Ibarra",
+    "team": "Ecuador",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "192505",
+    "player_name": "Romelu Lukaku",
+    "team": "Belgium",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "241803",
+    "player_name": "Roozbeh Cheshmi",
+    "team": "IR Iran",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "238581",
+    "player_name": "Ruben Vargas",
+    "team": "Switzerland",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "257437",
+    "player_name": "Rubin Colwill",
+    "team": "Wales",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "178005",
+    "player_name": "Rui Patrício",
+    "team": "Portugal",
+    "position": "GK",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "232230",
+    "player_name": "Rónald Matarrita",
+    "team": "Costa Rica",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "239818",
+    "player_name": "Rúben Dias",
+    "team": "Portugal",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "224293",
+    "player_name": "Rúben Neves",
+    "team": "Portugal",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "180548",
+    "player_name": "Saad Al Sheeb",
+    "team": "Qatar",
+    "position": "GK",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "244259",
+    "player_name": "Sadegh Moharrami",
+    "team": "IR Iran",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "233241",
+    "player_name": "Saeid Ezatolahi",
+    "team": "IR Iran",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "211173",
+    "player_name": "Saleh Al-Shehri",
+    "team": "Saudi Arabia",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "210602",
+    "player_name": "Salem Al-Dawsari",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "268785",
+    "player_name": "Salem Al-Hajri",
+    "team": "Qatar",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "252059",
+    "player_name": "Salis Abdul Samed",
+    "team": "Ghana",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "191269",
+    "player_name": "Salman Al-Faraj",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "220028",
+    "player_name": "Sam Adekugbe",
+    "team": "Canada",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "231949",
+    "player_name": "Saman Ghoddos",
+    "team": "IR Iran",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "233961",
+    "player_name": "Sami Al-Najei",
+    "team": "Saudi Arabia",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "241093",
+    "player_name": "Samuel Oum Gouet",
+    "team": "Cameroon",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "213092",
+    "player_name": "Samuel Piette",
+    "team": "Canada",
+    "position": "MF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "213955",
+    "player_name": "Sardar Azmoun",
+    "team": "IR Iran",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "246688",
+    "player_name": "Saud Abdulhamid",
+    "team": "Saudi Arabia",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "236699",
+    "player_name": "Saša Lukić",
+    "team": "Serbia",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "190780",
+    "player_name": "Sean Johnson",
+    "team": "United States",
+    "position": "GK",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "235973",
+    "player_name": "Sebastian Szymański",
+    "team": "Poland",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "197655",
+    "player_name": "Sebastián Coates",
+    "team": "Uruguay",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "205409",
+    "player_name": "Sebastián Sosa",
+    "team": "Uruguay",
+    "position": "GK",
+    "birth_year": 1986
+  },
+  {
+    "sofifa_id": "15251860",
+    "player_name": "Seifeddine Jaziri",
+    "team": "Tunisia",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "229010",
+    "player_name": "Selim Amallah",
+    "team": "Morocco",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "239358",
+    "player_name": "Seny Dieng",
+    "team": "Senegal",
+    "position": "GK",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "206113",
+    "player_name": "Serge Gnabry",
+    "team": "Germany",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "223848",
+    "player_name": "Sergej Milinković-Savić",
+    "team": "Serbia",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "189511",
+    "player_name": "Sergio Busquets",
+    "team": "Spain",
+    "position": "MF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "223690",
+    "player_name": "Sergio Rochet",
+    "team": "Uruguay",
+    "position": "GK",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "251804",
+    "player_name": "Sergiño Dest",
+    "team": "United States",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "232120",
+    "player_name": "Shaquell Moore",
+    "team": "United States",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "233225",
+    "player_name": "Shogo Taniguchi",
+    "team": "Japan",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "217414",
+    "player_name": "Shoja' Khalilzadeh",
+    "team": "IR Iran",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "245622",
+    "player_name": "Shuto Machino",
+    "team": "Japan",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "217649",
+    "player_name": "Shūichi Gonda",
+    "team": "Japan",
+    "position": "GK",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "216158",
+    "player_name": "Silvan Widmer",
+    "team": "Switzerland",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "179645",
+    "player_name": "Simon Kjær",
+    "team": "Denmark",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "173426",
+    "player_name": "Simon Mignolet",
+    "team": "Belgium",
+    "position": "GK",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "255151",
+    "player_name": "Simon Ngapandouetnbu",
+    "team": "Cameroon",
+    "position": "GK",
+    "birth_year": 2003
+  },
+  {
+    "sofifa_id": "211381",
+    "player_name": "Sofiane Boufal",
+    "team": "Morocco",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "224158",
+    "player_name": "Sofyan Amrabat",
+    "team": "Morocco",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "200104",
+    "player_name": "Son Heung-min",
+    "team": "Korea Republic",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "221875",
+    "player_name": "Son Jun-ho",
+    "team": "Korea Republic",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "238570",
+    "player_name": "Song Bumkeun",
+    "team": "Korea Republic",
+    "position": "GK",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "248188",
+    "player_name": "Song Minkyu",
+    "team": "Korea Republic",
+    "position": "FW",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "260478",
+    "player_name": "Sorba Thomas",
+    "team": "Wales",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "235589",
+    "player_name": "Srđan Babić",
+    "team": "Serbia",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "209547",
+    "player_name": "Stefan Mitrović",
+    "team": "Serbia",
+    "position": "DF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "198176",
+    "player_name": "Stefan de Vrij",
+    "team": "Netherlands",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "242380",
+    "player_name": "Stephen Eustáquio",
+    "team": "Canada",
+    "position": "MF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "163705",
+    "player_name": "Steve Mandanda",
+    "team": "France",
+    "position": "GK",
+    "birth_year": 1985
+  },
+  {
+    "sofifa_id": "200260",
+    "player_name": "Steven Berghuis",
+    "team": "Netherlands",
+    "position": "MF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "225953",
+    "player_name": "Steven Bergwijn",
+    "team": "Netherlands",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "192528",
+    "player_name": "Steven Vitória",
+    "team": "Canada",
+    "position": "DF",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "10907973",
+    "player_name": "Strahinja Eraković",
+    "team": "Serbia",
+    "position": "DF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "254840",
+    "player_name": "Strahinja Pavlović",
+    "team": "Serbia",
+    "position": "DF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "232477",
+    "player_name": "Sultan Al-Ghanam",
+    "team": "Saudi Arabia",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "239732",
+    "player_name": "Szymon Żurkowski",
+    "team": "Poland",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "10057499",
+    "player_name": "Taha Yassine Khenissi",
+    "team": "Tunisia",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "246800",
+    "player_name": "Tajon Buchanan",
+    "team": "Canada",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "237681",
+    "player_name": "Takefusa Kubo",
+    "team": "Japan",
+    "position": "FW",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "232938",
+    "player_name": "Takehiro Tomiyasu",
+    "team": "Japan",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "232610",
+    "player_name": "Takuma Asano",
+    "team": "Japan",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "226627",
+    "player_name": "Takumi Minamino",
+    "team": "Japan",
+    "position": "FW",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "238878",
+    "player_name": "Tarek Salman",
+    "team": "Qatar",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "242418",
+    "player_name": "Tariq Lamptey",
+    "team": "Ghana",
+    "position": "DF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "240679",
+    "player_name": "Teun Koopmeiners",
+    "team": "Netherlands",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "232656",
+    "player_name": "Theo Hernández",
+    "team": "France",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "245371",
+    "player_name": "Thiago Almada",
+    "team": "Argentina",
+    "position": "MF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "164240",
+    "player_name": "Thiago Silva",
+    "team": "Brazil",
+    "position": "DF",
+    "birth_year": 1984
+  },
+  {
+    "sofifa_id": "192119",
+    "player_name": "Thibaut Courtois",
+    "team": "Belgium",
+    "position": "GK",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "226229",
+    "player_name": "Thilo Kehrer",
+    "team": "Germany",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "193283",
+    "player_name": "Thomas Delaney",
+    "team": "Denmark",
+    "position": "MF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "228310",
+    "player_name": "Thomas Deng",
+    "team": "Australia",
+    "position": "DF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "202371",
+    "player_name": "Thomas Meunier",
+    "team": "Belgium",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "189596",
+    "player_name": "Thomas Müller",
+    "team": "Germany",
+    "position": "FW",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "209989",
+    "player_name": "Thomas Partey",
+    "team": "Ghana",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "203486",
+    "player_name": "Thorgan Hazard",
+    "team": "Belgium",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "198261",
+    "player_name": "Tim Ream",
+    "team": "United States",
+    "position": "DF",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "222501",
+    "player_name": "Timothy Castagne",
+    "team": "Belgium",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "241496",
+    "player_name": "Timothy Weah",
+    "team": "United States",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "184087",
+    "player_name": "Toby Alderweireld",
+    "team": "Belgium",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "211363",
+    "player_name": "Tom Lockyer",
+    "team": "Wales",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "231281",
+    "player_name": "Trent Alexander-Arnold",
+    "team": "England",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "232999",
+    "player_name": "Tyler Adams",
+    "team": "United States",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "238041",
+    "player_name": "Tyrell Malacia",
+    "team": "Netherlands",
+    "position": "DF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "230869",
+    "player_name": "Unai Simón",
+    "team": "Spain",
+    "position": "GK",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "237997",
+    "player_name": "Uriel Antuna",
+    "team": "Mexico",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "244253",
+    "player_name": "Uroš Račić",
+    "team": "Serbia",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "241785",
+    "player_name": "Vahid Amiri",
+    "team": "IR Iran",
+    "position": "FW",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "224836",
+    "player_name": "Vanja Milinković-Savić",
+    "team": "Serbia",
+    "position": "GK",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "235658",
+    "player_name": "Victor Nelsson",
+    "team": "Denmark",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "199069",
+    "player_name": "Vincent Aboubakar",
+    "team": "Cameroon",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "226537",
+    "player_name": "Vincent Janssen",
+    "team": "Netherlands",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "238794",
+    "player_name": "Vinicius Júnior",
+    "team": "Brazil",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "203376",
+    "player_name": "Virgil van Dijk",
+    "team": "Netherlands",
+    "position": "DF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "255253",
+    "player_name": "Vitinha",
+    "team": "Portugal",
+    "position": "MF",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "194845",
+    "player_name": "Wahbi Khazri",
+    "team": "Tunisia",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "264008",
+    "player_name": "Wajdi Kechrida",
+    "team": "Tunisia",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "268511",
+    "player_name": "Walid Cheddira",
+    "team": "Morocco",
+    "position": "FW",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "212591",
+    "player_name": "Walker Zimmerman",
+    "team": "United States",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "232487",
+    "player_name": "Wataru Endo",
+    "team": "Japan",
+    "position": "MF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "170084",
+    "player_name": "Wayne Hennessey",
+    "team": "Wales",
+    "position": "GK",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "238744",
+    "player_name": "Weston McKennie",
+    "team": "United States",
+    "position": "MF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "207566",
+    "player_name": "William Carvalho",
+    "team": "Portugal",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "256196",
+    "player_name": "William Pacho",
+    "team": "Ecuador",
+    "position": "DF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "243715",
+    "player_name": "William Saliba",
+    "team": "France",
+    "position": "DF",
+    "birth_year": 2001
+  },
+  {
+    "sofifa_id": "186153",
+    "player_name": "Wojciech Szczęsny",
+    "team": "Poland",
+    "position": "GK",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "235036",
+    "player_name": "Wout Faes",
+    "team": "Belgium",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "223689",
+    "player_name": "Wout Weghorst",
+    "team": "Netherlands",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "186555",
+    "player_name": "Wéverton",
+    "team": "Brazil",
+    "position": "GK",
+    "birth_year": 1987
+  },
+  {
+    "sofifa_id": "245367",
+    "player_name": "Xavi Simons",
+    "team": "Netherlands",
+    "position": "FW",
+    "birth_year": 2003
+  },
+  {
+    "sofifa_id": "246406",
+    "player_name": "Xavier Arreaga",
+    "team": "Ecuador",
+    "position": "DF",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "193348",
+    "player_name": "Xherdan Shaqiri",
+    "team": "Switzerland",
+    "position": "FW",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "268866",
+    "player_name": "Yahya Attiat Allah",
+    "team": "Morocco",
+    "position": "DF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "268864",
+    "player_name": "Yahya Jabrane",
+    "team": "Morocco",
+    "position": "MF",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "177683",
+    "player_name": "Yann Sommer",
+    "team": "Switzerland",
+    "position": "GK",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "208418",
+    "player_name": "Yannick Carrasco",
+    "team": "Belgium",
+    "position": "FW",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "210603",
+    "player_name": "Yasser Al-Shahrani",
+    "team": "Saudi Arabia",
+    "position": "DF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "209981",
+    "player_name": "Yassine Bounou",
+    "team": "Morocco",
+    "position": "GK",
+    "birth_year": 1991
+  },
+  {
+    "sofifa_id": "241746",
+    "player_name": "Yassine Meriah",
+    "team": "Tunisia",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "14260723",
+    "player_name": "Yeltsin Tejeda",
+    "team": "Costa Rica",
+    "position": "MF",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "259377",
+    "player_name": "Yeremi Pino",
+    "team": "Spain",
+    "position": "FW",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "237965",
+    "player_name": "Yoon Jong-gyu",
+    "team": "Korea Republic",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "216393",
+    "player_name": "Youri Tielemans",
+    "team": "Belgium",
+    "position": "MF",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "270642",
+    "player_name": "Yousef Hassan",
+    "team": "Qatar",
+    "position": "GK",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "235410",
+    "player_name": "Youssef En-Nesyri",
+    "team": "Morocco",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "14988266",
+    "player_name": "Youssef Msakni",
+    "team": "Tunisia",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "245630",
+    "player_name": "Youssouf Fofana",
+    "team": "France",
+    "position": "MF",
+    "birth_year": 1999
+  },
+  {
+    "sofifa_id": "215699",
+    "player_name": "Youssouf Sabaly",
+    "team": "Senegal",
+    "position": "DF",
+    "birth_year": 1993
+  },
+  {
+    "sofifa_id": "240833",
+    "player_name": "Youssoufa Moukoko",
+    "team": "Germany",
+    "position": "FW",
+    "birth_year": 2004
+  },
+  {
+    "sofifa_id": "268712",
+    "player_name": "Youstin Salas",
+    "team": "Costa Rica",
+    "position": "DF",
+    "birth_year": 1996
+  },
+  {
+    "sofifa_id": "246316",
+    "player_name": "Yuki Soma",
+    "team": "Japan",
+    "position": "FW",
+    "birth_year": 1997
+  },
+  {
+    "sofifa_id": "253177",
+    "player_name": "Yunus Musah",
+    "team": "United States",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "207791",
+    "player_name": "Yussuf Poulsen",
+    "team": "Denmark",
+    "position": "FW",
+    "birth_year": 1994
+  },
+  {
+    "sofifa_id": "194359",
+    "player_name": "Yuto Nagatomo",
+    "team": "Japan",
+    "position": "MF",
+    "birth_year": 1986
+  },
+  {
+    "sofifa_id": "248564",
+    "player_name": "Zakaria Aboukhlal",
+    "team": "Morocco",
+    "position": "FW",
+    "birth_year": 2000
+  },
+  {
+    "sofifa_id": "254262",
+    "player_name": "Zeno Debast",
+    "team": "Belgium",
+    "position": "DF",
+    "birth_year": 2003
+  },
+  {
+    "sofifa_id": "201153",
+    "player_name": "Álvaro Morata",
+    "team": "Spain",
+    "position": "FW",
+    "birth_year": 1992
+  },
+  {
+    "sofifa_id": "14461542",
+    "player_name": "Álvaro Zamora",
+    "team": "Costa Rica",
+    "position": "MF",
+    "birth_year": 2002
+  },
+  {
+    "sofifa_id": "214997",
+    "player_name": "Ángel Correa",
+    "team": "Argentina",
+    "position": "MF",
+    "birth_year": 1995
+  },
+  {
+    "sofifa_id": "183898",
+    "player_name": "Ángel Di María",
+    "team": "Argentina",
+    "position": "MF",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "223053",
+    "player_name": "Ángel Mena",
+    "team": "Ecuador",
+    "position": "FW",
+    "birth_year": 1988
+  },
+  {
+    "sofifa_id": "246055",
+    "player_name": "Ángelo Preciado",
+    "team": "Ecuador",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "240130",
+    "player_name": "Éder Militão",
+    "team": "Brazil",
+    "position": "DF",
+    "birth_year": 1998
+  },
+  {
+    "sofifa_id": "212772",
+    "player_name": "Óscar Duarte",
+    "team": "Costa Rica",
+    "position": "DF",
+    "birth_year": 1989
+  },
+  {
+    "sofifa_id": "186942",
+    "player_name": "İlkay Gündoğan",
+    "team": "Germany",
+    "position": "MF",
+    "birth_year": 1990
+  },
+  {
+    "sofifa_id": "189908",
+    "player_name": "Łukasz Skorupski",
+    "team": "Poland",
+    "position": "GK",
+    "birth_year": 1991
+  }
+]
