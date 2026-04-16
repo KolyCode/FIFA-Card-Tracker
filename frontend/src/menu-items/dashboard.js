@@ -1,8 +1,8 @@
 // assets
-import { IconUsers, IconBook, IconHome } from '@tabler/icons-react';
+import { IconUsers, IconBook, IconHome, IconHelp } from '@tabler/icons-react';
 
 // constant
-const icons = { IconUsers, IconBook, IconHome };
+const icons = { IconUsers, IconBook, IconHome, IconHelp };
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
@@ -34,6 +34,15 @@ const dashboard = {
       url: '/my-players',
       icon: icons.IconBook,
       breadcrumbs: false
+    },
+    {
+      id: 'documentation',
+      title: 'Documentation',
+      type: 'item',
+      url: 'https://github.com/KolyCode/FIFA-Card-Tracker',
+      icon: icons.IconHelp,
+      external: true,
+      target: true
     }
   ]
 };
