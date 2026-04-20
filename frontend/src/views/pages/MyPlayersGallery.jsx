@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Box, TextField, Typography, Grid, Alert, Fab, Paper, Button } from '@mui/material';
+import { Box, TextField, Typography, Grid, Alert, Fab, Paper, Button, LinearProgress, Tooltip } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import LockIcon from '@mui/icons-material/Lock';
 import PlayerCard from '../../ui-component/cards/PlayerCard';
@@ -9,6 +9,7 @@ import { supabase } from '../../utils/authClient';
 const MyPlayersGallery = () => {
     const navigate = useNavigate();
     const [players, setPlayers] = useState([]);
+    const [totalPlayers, setTotalPlayers] = useState(0);
     const [searchQuery, setSearchQuery] = useState('');
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [loading, setLoading] = useState(true);
@@ -17,10 +18,12 @@ const MyPlayersGallery = () => {
         const checkSession = async () => {
             const { data: { user } } = await supabase.auth.getUser();
             setIsLoggedIn(!!user);
-            if (user) {
-                const { data } = await supabase.collection.getAll();
-                setPlayers(data);
-            }
+            const [{ data: allPlayers }, { data: collection }] = await Promise.all([
+                supabase.players.getAll(),
+                user ? supabase.collection.getAll() : Promise.resolve({ data: [] }),
+            ]);
+            if (allPlayers) setTotalPlayers(allPlayers.length);
+            if (user) setPlayers(collection ?? []);
             setLoading(false);
         };
 
@@ -98,6 +101,23 @@ const MyPlayersGallery = () => {
                     <Typography variant="subtitle1" color="text.secondary">
                         Showing {filteredPlayers.length} of {players.length} collected players
                     </Typography>
+                )}
+                {totalPlayers > 0 && (
+                    <Box sx={{ width: { xs: '100%', sm: '400px', md: '500px' }, mt: 1 }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.5 }}>
+                            <Typography variant="caption" color="text.secondary">Collection progress</Typography>
+                            <Typography variant="caption" color="text.secondary">
+                                {players.length} / {totalPlayers} ({Math.round(players.length / totalPlayers * 100)}%)
+                            </Typography>
+                        </Box>
+                        <Tooltip title={`${players.length} of ${totalPlayers} stickers collected`}>
+                            <LinearProgress
+                                variant="determinate"
+                                value={(players.length / totalPlayers) * 100}
+                                sx={{ height: 10, borderRadius: 5 }}
+                            />
+                        </Tooltip>
+                    </Box>
                 )}
             </Box>
 

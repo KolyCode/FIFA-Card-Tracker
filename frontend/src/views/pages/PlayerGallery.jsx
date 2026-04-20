@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Box, TextField, Typography, Grid } from '@mui/material';
+import { Box, TextField, Typography, Grid, LinearProgress, Tooltip } from '@mui/material';
 import PlayerCard from '../../ui-component/cards/PlayerCard';
 import { supabase } from '../../utils/authClient';
 
@@ -72,6 +72,23 @@ const PlayerGallery = () => {
                 <Typography variant="subtitle1" color="text.secondary">
                     Showing {filteredPlayers.length} of {players.length} players
                 </Typography>
+                {isLoggedIn && players.length > 0 && (
+                    <Box sx={{ width: { xs: '100%', sm: '400px', md: '500px' }, mt: 1 }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 0.5 }}>
+                            <Typography variant="caption" color="text.secondary">Collection progress</Typography>
+                            <Typography variant="caption" color="text.secondary">
+                                {ownedIds.size} / {players.length} ({Math.round(ownedIds.size / players.length * 100)}%)
+                            </Typography>
+                        </Box>
+                        <Tooltip title={`${ownedIds.size} of ${players.length} stickers collected`}>
+                            <LinearProgress
+                                variant="determinate"
+                                value={players.length > 0 ? (ownedIds.size / players.length) * 100 : 0}
+                                sx={{ height: 10, borderRadius: 5 }}
+                            />
+                        </Tooltip>
+                    </Box>
+                )}
             </Box>
 
             <Grid container spacing={3}>
