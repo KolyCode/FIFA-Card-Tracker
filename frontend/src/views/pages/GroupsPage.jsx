@@ -34,7 +34,9 @@ import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import MailIcon from '@mui/icons-material/Mail';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 import { supabase } from '../../utils/authClient';
+import TradeDialog from './TradeDialog';
 
 const GroupsPage = () => {
   const [groups, setGroups] = useState([]);
@@ -50,14 +52,24 @@ const GroupsPage = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [expandedGroups, setExpandedGroups] = useState(new Set());
+  const [currentUser, setCurrentUser] = useState(null);
+  const [trades, setTrades] = useState({ incoming: [], outgoing: [] });
+  const [tradeDialogOpen, setTradeDialogOpen] = useState(false);
+  const [tradeDialogMode, setTradeDialogMode] = useState('propose');
+  const [tradeTarget, setTradeTarget] = useState(null);
+  const [tradeGroupId, setTradeGroupId] = useState(null);
+  const [tradeToCounter, setTradeToCounter] = useState(null);
+  const [tradeBanMsg, setTradeBanMsg] = useState('');
 
   useEffect(() => {
     const checkSession = async () => {
       const { data: { user } } = await supabase.auth.getUser();
       setIsLoggedIn(!!user);
       if (user) {
+        setCurrentUser(user);
         loadGroups();
         loadInvites();
+        loadTrades();
       }
       setLoading(false);
     };
@@ -68,11 +80,16 @@ const GroupsPage = () => {
       async (event, session) => {
         setIsLoggedIn(!!session);
         if (session) {
+          const { data: { user } } = await supabase.auth.getUser();
+          setCurrentUser(user);
           loadGroups();
           loadInvites();
+          loadTrades();
         } else {
           setGroups([]);
           setInvites([]);
+          setTrades({ incoming: [], outgoing: [] });
+          setCurrentUser(null);
         }
       }
     );
@@ -95,6 +112,13 @@ const GroupsPage = () => {
     const { data, error } = await supabase.groups.getInvites();
     if (!error) {
       setInvites(data);
+    }
+  };
+
+  const loadTrades = async () => {
+    const { data, error } = await supabase.trades.getAll();
+    if (!error) {
+      setTrades(data);
     }
   };
 
@@ -212,6 +236,61 @@ const GroupsPage = () => {
     setExpandedGroups(newExpanded);
   };
 
+  const handleOpenTrade = (member, groupId) => {
+    if (currentUser?.trade_banned) {
+      setTradeBanMsg('You have been banned from trading.');
+      return;
+    }
+    if (member.trade_banned) {
+      setTradeBanMsg(`${member.username} has been banned from trading.`);
+      return;
+    }
+    setTradeTarget(member);
+    setTradeGroupId(groupId);
+    setTradeDialogMode('propose');
+    setTradeToCounter(null);
+    setTradeDialogOpen(true);
+  };
+
+  const handleTradeSubmit = async (offeredPlayerId, requestedPlayerId) => {
+    if (tradeDialogMode === 'propose') {
+      const { error } = await supabase.trades.create(tradeGroupId, tradeTarget.id, offeredPlayerId, requestedPlayerId);
+      if (error) { setError(error.message); return; }
+    } else {
+      // Counter: only the offered card changes; backend keeps original offered card as the requested card
+      const { error } = await supabase.trades.respond(tradeToCounter.id, 'counter', offeredPlayerId);
+      if (error) { setError(error.message); return; }
+    }
+    setTradeDialogOpen(false);
+    loadTrades();
+    setSuccess(tradeDialogMode === 'propose' ? 'Trade offer sent!' : 'Counter offer sent!');
+    setTimeout(() => setSuccess(''), 3000);
+  };
+
+  const handleAcceptTrade = async (trade) => {
+    const { error } = await supabase.trades.respond(trade.id, 'accept');
+    if (error) { setError(error.message); return; }
+    loadTrades();
+    setSuccess('Trade accepted! Cards have been swapped.');
+    setTimeout(() => setSuccess(''), 4000);
+  };
+
+  const handleDeclineTrade = async (trade) => {
+    const { error } = await supabase.trades.respond(trade.id, 'decline');
+    if (error) { setError(error.message); return; }
+    setTrades((prev) => ({ ...prev, incoming: prev.incoming.filter((t) => t.id !== trade.id) }));
+    setSuccess('Trade declined.');
+    setTimeout(() => setSuccess(''), 3000);
+  };
+
+  const handleOpenCounter = (trade) => {
+    setTradeToCounter(trade);
+    setTradeTarget({ id: trade.from_user_id, username: trade.from_username });
+    setTradeGroupId(trade.group_id);
+    setTradeDialogMode('counter');
+    setTradeDialogOpen(true);
+  };
+
   if (loading) {
     return (
       <Box display="flex" justifyContent="center" alignItems="center" minHeight="400px">
@@ -304,6 +383,101 @@ const GroupsPage = () => {
         </Box>
       )}
 
+      {/* Pending Trades Section */}
+      {(trades.incoming.length > 0 || trades.outgoing.length > 0) && (
+        <Box mb={4}>
+          <Box display="flex" alignItems="center" gap={1} mb={2}>
+            <SwapHorizIcon color="secondary" />
+            <Typography variant="h6">Trades</Typography>
+            {trades.incoming.length > 0 && (
+              <Chip label={`${trades.incoming.length} incoming`} size="small" color="secondary" />
+            )}
+          </Box>
+
+          {trades.incoming.length > 0 && (
+            <>
+              <Typography variant="subtitle2" color="text.secondary" gutterBottom>
+                Incoming — waiting for your response
+              </Typography>
+              {trades.incoming.map((trade) => (
+                <Card key={trade.id} sx={{ mb: 1.5, borderLeft: '4px solid', borderColor: 'secondary.main' }}>
+                  <CardContent sx={{ py: 1.5, '&:last-child': { pb: 1.5 } }}>
+                    <Box display="flex" alignItems="center" justifyContent="space-between" flexWrap="wrap" gap={1}>
+                      <Box>
+                        <Typography variant="body1">
+                          <strong>{trade.from_username}</strong> offers{' '}
+                          <strong>{trade.offered_player?.player_name}</strong>{' '}
+                          for your <strong>{trade.requested_player?.player_name}</strong>
+                        </Typography>
+                        <Typography variant="caption" color="text.secondary">
+                          {trade.group_name} · {new Date(trade.created_at).toLocaleDateString()}
+                        </Typography>
+                      </Box>
+                      <Box display="flex" gap={1} flexWrap="wrap">
+                        <Button
+                          variant="contained"
+                          color="success"
+                          size="small"
+                          startIcon={<CheckIcon />}
+                          onClick={() => handleAcceptTrade(trade)}
+                        >
+                          Accept
+                        </Button>
+                        <Button
+                          variant="outlined"
+                          color="info"
+                          size="small"
+                          startIcon={<SwapHorizIcon />}
+                          onClick={() => handleOpenCounter(trade)}
+                        >
+                          Counter
+                        </Button>
+                        <Button
+                          variant="outlined"
+                          color="error"
+                          size="small"
+                          startIcon={<CloseIcon />}
+                          onClick={() => handleDeclineTrade(trade)}
+                        >
+                          Decline
+                        </Button>
+                      </Box>
+                    </Box>
+                  </CardContent>
+                </Card>
+              ))}
+            </>
+          )}
+
+          {trades.outgoing.length > 0 && (
+            <>
+              <Typography
+                variant="subtitle2"
+                color="text.secondary"
+                gutterBottom
+                sx={{ mt: trades.incoming.length > 0 ? 2 : 0 }}
+              >
+                Outgoing — waiting for their response
+              </Typography>
+              {trades.outgoing.map((trade) => (
+                <Card key={trade.id} sx={{ mb: 1.5, borderLeft: '4px solid', borderColor: 'text.disabled' }}>
+                  <CardContent sx={{ py: 1.5, '&:last-child': { pb: 1.5 } }}>
+                    <Typography variant="body1">
+                      You offered <strong>{trade.offered_player?.player_name}</strong>{' '}
+                      for <strong>{trade.to_username}</strong>&apos;s{' '}
+                      <strong>{trade.requested_player?.player_name}</strong>
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      {trade.group_name} · {new Date(trade.created_at).toLocaleDateString()}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              ))}
+            </>
+          )}
+        </Box>
+      )}
+
       {groups.length === 0 ? (
         <Box textAlign="center" py={8}>
           <GroupIcon sx={{ fontSize: 64, color: 'text.secondary', mb: 2 }} />
@@ -341,7 +515,7 @@ const GroupsPage = () => {
                       />
                       {group.is_admin && (
                         <Chip
-                          label="Admin"
+                          label="Group Admin"
                           size="small"
                           color="primary"
                           icon={<AdminPanelSettingsIcon />}
@@ -390,7 +564,7 @@ const GroupsPage = () => {
                             <Typography>{member.username}</Typography>
                             {member.is_admin && (
                               <Chip
-                                label="Admin"
+                                label="Group Admin"
                                 size="small"
                                 color="primary"
                                 icon={<AdminPanelSettingsIcon />}
@@ -400,33 +574,46 @@ const GroupsPage = () => {
                         }
                         secondary={`Joined: ${new Date(member.joined_at).toLocaleDateString()}`}
                       />
-                      {group.is_admin && member.id !== parseInt(localStorage.getItem('auth_user')?.id || '0') && (
+                      {member.id !== currentUser?.id && (
                         <ListItemSecondaryAction>
-                          {member.is_admin ? (
-                            <IconButton
-                              edge="end"
-                              onClick={() => handleDemoteAdmin(group.id, member.id, member.username)}
-                              title="Demote to member"
-                            >
-                              <AdminPanelSettingsIcon color="primary" />
-                            </IconButton>
-                          ) : (
-                            <IconButton
-                              edge="end"
-                              onClick={() => handlePromoteAdmin(group.id, member.id, member.username)}
-                              title="Promote to admin"
-                            >
-                              <AdminPanelSettingsIcon />
-                            </IconButton>
-                          )}
-                          <IconButton
-                            edge="end"
-                            onClick={() => handleRemoveMember(group.id, member.id, member.username)}
-                            title="Remove from group"
-                            sx={{ ml: 1 }}
+                          <Button
+                            size="small"
+                            variant="outlined"
+                            startIcon={<SwapHorizIcon />}
+                            onClick={() => handleOpenTrade(member, group.id)}
+                            sx={{ mr: 1 }}
                           >
-                            <PersonRemoveIcon color="error" />
-                          </IconButton>
+                            Trade
+                          </Button>
+                          {group.is_admin && (
+                            <>
+                              {member.is_admin ? (
+                                <IconButton
+                                  edge="end"
+                                  onClick={() => handleDemoteAdmin(group.id, member.id, member.username)}
+                                  title="Demote to member"
+                                >
+                                  <AdminPanelSettingsIcon color="primary" />
+                                </IconButton>
+                              ) : (
+                                <IconButton
+                                  edge="end"
+                                  onClick={() => handlePromoteAdmin(group.id, member.id, member.username)}
+                                  title="Promote to admin"
+                                >
+                                  <AdminPanelSettingsIcon />
+                                </IconButton>
+                              )}
+                              <IconButton
+                                edge="end"
+                                onClick={() => handleRemoveMember(group.id, member.id, member.username)}
+                                title="Remove from group"
+                                sx={{ ml: 1 }}
+                              >
+                                <PersonRemoveIcon color="error" />
+                              </IconButton>
+                            </>
+                          )}
                         </ListItemSecondaryAction>
                       )}
                     </ListItem>
@@ -493,6 +680,26 @@ const GroupsPage = () => {
           <Button onClick={handleInviteMember} variant="contained">
             Send Invite
           </Button>
+        </DialogActions>
+      </Dialog>
+
+      <TradeDialog
+        open={tradeDialogOpen}
+        onClose={() => setTradeDialogOpen(false)}
+        mode={tradeDialogMode}
+        targetUser={tradeTarget}
+        fixedRequestedCard={tradeDialogMode === 'counter' ? tradeToCounter?.offered_player : null}
+        onSubmit={handleTradeSubmit}
+      />
+
+      {/* Trade ban warning dialog */}
+      <Dialog open={!!tradeBanMsg} onClose={() => setTradeBanMsg('')}>
+        <DialogTitle>Trading Unavailable</DialogTitle>
+        <DialogContent>
+          <DialogContentText>{tradeBanMsg}</DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setTradeBanMsg('')} variant="contained">OK</Button>
         </DialogActions>
       </Dialog>
     </Box>

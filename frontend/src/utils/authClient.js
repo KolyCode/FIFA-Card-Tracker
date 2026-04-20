@@ -83,7 +83,7 @@ export const supabase = {
           return { data: { user: null } };
         }
         const data = await res.json();
-        return { data: { user: { email: data.email, id: data.id } } };
+        return { data: { user: { email: data.email, id: data.id, trade_banned: data.trade_banned } } };
       } catch {
         // Fall back to stored user if server is unreachable
         const user = getStoredUser();
@@ -340,6 +340,82 @@ export const supabase = {
         return { error: null };
       } catch {
         return { error: { message: 'Network error.' } };
+      }
+    },
+  },
+
+  trades: {
+    async getAll() {
+      const token = getStoredToken();
+      if (!token) return { data: { incoming: [], outgoing: [] }, error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/trades/`, {
+          headers: { 'Authorization': `Token ${token}` },
+        });
+        if (!res.ok) return { data: { incoming: [], outgoing: [] }, error: { message: 'Failed to fetch trades.' } };
+        const data = await res.json();
+        return { data, error: null };
+      } catch {
+        return { data: { incoming: [], outgoing: [] }, error: { message: 'Network error.' } };
+      }
+    },
+
+    async create(groupId, toUserId, offeredPlayerId, requestedPlayerId) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/trades/create/`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${token}` },
+          body: JSON.stringify({
+            group_id: groupId,
+            to_user_id: toUserId,
+            offered_player_id: offeredPlayerId,
+            requested_player_id: requestedPlayerId,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok) return { error: { message: data.error || 'Failed to create trade.' } };
+        return { data, error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+
+    async respond(tradeId, action, offeredPlayerId, requestedPlayerId) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const body = { action };
+        if (offeredPlayerId) body.offered_player_id = offeredPlayerId;
+        if (requestedPlayerId) body.requested_player_id = requestedPlayerId;
+        const res = await fetch(`${API_URL}/api/trades/${tradeId}/respond/`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${token}` },
+          body: JSON.stringify(body),
+        });
+        const data = await res.json();
+        if (!res.ok) return { error: { message: data.error || 'Failed to respond to trade.' } };
+        return { error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+  },
+
+  users: {
+    async getCollection(userId) {
+      const token = getStoredToken();
+      if (!token) return { data: [], error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/users/${userId}/collection/`, {
+          headers: { 'Authorization': `Token ${token}` },
+        });
+        if (!res.ok) return { data: [], error: { message: 'Failed to fetch user collection.' } };
+        const data = await res.json();
+        return { data, error: null };
+      } catch {
+        return { data: [], error: { message: 'Network error.' } };
       }
     },
   },

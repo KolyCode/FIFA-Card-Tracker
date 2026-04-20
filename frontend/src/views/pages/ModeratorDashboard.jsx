@@ -43,6 +43,9 @@ import ShieldIcon from '@mui/icons-material/Shield';
 import AddIcon from '@mui/icons-material/Add';
 import SearchIcon from '@mui/icons-material/Search';
 import LogoutIcon from '@mui/icons-material/Logout';
+import BlockIcon from '@mui/icons-material/Block';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import PeopleIcon from '@mui/icons-material/People';
 
 import { modAuth, modApi } from 'utils/modAuthClient';
 
@@ -72,6 +75,14 @@ export default function ModeratorDashboard() {
   const [addPlayerOpen, setAddPlayerOpen] = useState(false);
   const [newPlayer, setNewPlayer] = useState({ id: '', sticker_number: '', player_name: '', team: '', position: '', birth_year: '' });
 
+  // Users state
+  const [users, setUsers] = useState([]);
+  const [usersLoading, setUsersLoading] = useState(false);
+  const [userSearch, setUserSearch] = useState('');
+  const [userPage, setUserPage] = useState(0);
+  const [userRowsPerPage, setUserRowsPerPage] = useState(25);
+  const [deleteUserTarget, setDeleteUserTarget] = useState(null);
+
   // Shared state
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -90,11 +101,22 @@ export default function ModeratorDashboard() {
     if (tab === 1 && players.length === 0) {
       loadPlayers();
     }
+    if (tab === 2 && users.length === 0) {
+      loadUsers();
+    }
   }, [tab]);
 
   const showSuccess = (msg) => {
     setSuccess(msg);
     setTimeout(() => setSuccess(''), 3000);
+  };
+
+  const loadUsers = async () => {
+    setUsersLoading(true);
+    const { data, error } = await modApi.getAllUsers();
+    setUsersLoading(false);
+    if (error) setError(error.message);
+    else setUsers(data);
   };
 
   const loadGroups = async () => {
@@ -174,6 +196,28 @@ export default function ModeratorDashboard() {
     }
   };
 
+  const handleToggleTradeBan = async (user) => {
+    const { error } = await modApi.setTradeBan(user.id, !user.trade_banned);
+    if (error) {
+      setError(error.message);
+    } else {
+      setUsers(users.map((u) => u.id === user.id ? { ...u, trade_banned: !u.trade_banned } : u));
+      showSuccess(`${user.username} ${!user.trade_banned ? 'banned from trading' : 'allowed to trade'}.`);
+    }
+  };
+
+  const handleDeleteUser = async () => {
+    if (!deleteUserTarget) return;
+    const { error } = await modApi.deleteUser(deleteUserTarget.id);
+    setDeleteUserTarget(null);
+    if (error) {
+      setError(error.message);
+    } else {
+      setUsers(users.filter((u) => u.id !== deleteUserTarget.id));
+      showSuccess(`User "${deleteUserTarget.username}" deleted.`);
+    }
+  };
+
   const handleLogout = () => {
     modAuth.logout();
     navigate('/pages/mod-login');
@@ -193,6 +237,16 @@ export default function ModeratorDashboard() {
   const pagedPlayers = filteredPlayers.slice(
     playerPage * playerRowsPerPage,
     playerPage * playerRowsPerPage + playerRowsPerPage
+  );
+
+  const filteredUsers = users.filter((u) => {
+    const q = userSearch.toLowerCase();
+    return !q || u.username?.toLowerCase().includes(q) || u.email?.toLowerCase().includes(q);
+  });
+
+  const pagedUsers = filteredUsers.slice(
+    userPage * userRowsPerPage,
+    userPage * userRowsPerPage + userRowsPerPage
   );
 
   return (
@@ -227,6 +281,7 @@ export default function ModeratorDashboard() {
       <Tabs value={tab} onChange={(_, v) => setTab(v)} sx={{ borderBottom: 1, borderColor: 'divider', mb: 2 }}>
         <Tab icon={<GroupIcon />} iconPosition="start" label={`Groups (${groups.length})`} />
         <Tab icon={<PersonIcon />} iconPosition="start" label={`Players (${players.length})`} />
+        <Tab icon={<PeopleIcon />} iconPosition="start" label={`Users (${users.length})`} />
       </Tabs>
 
       {/* ===== GROUPS TAB ===== */}
@@ -466,6 +521,118 @@ export default function ModeratorDashboard() {
           <Button onClick={() => setDeletePlayerTarget(null)}>Cancel</Button>
           <Button color="error" variant="contained" onClick={handleDeletePlayer}>
             Delete
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* ===== USERS TAB ===== */}
+      <TabPanel value={tab} index={2}>
+        <Box display="flex" alignItems="center" mb={2}>
+          <TextField
+            size="small"
+            placeholder="Search users..."
+            value={userSearch}
+            onChange={(e) => { setUserSearch(e.target.value); setUserPage(0); }}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon fontSize="small" />
+                </InputAdornment>
+              ),
+            }}
+            sx={{ width: 280 }}
+          />
+        </Box>
+
+        {usersLoading ? (
+          <Typography color="text.secondary">Loading users...</Typography>
+        ) : (
+          <Paper>
+            <TableContainer>
+              <Table size="small">
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Username</TableCell>
+                    <TableCell>Email</TableCell>
+                    <TableCell>Date Joined</TableCell>
+                    <TableCell>Trade Status</TableCell>
+                    <TableCell align="right">Actions</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {pagedUsers.map((user) => (
+                    <TableRow key={user.id} hover>
+                      <TableCell>{user.username}</TableCell>
+                      <TableCell>{user.email}</TableCell>
+                      <TableCell>{new Date(user.date_joined).toLocaleDateString()}</TableCell>
+                      <TableCell>
+                        {user.trade_banned ? (
+                          <Chip label="Trade Banned" color="error" size="small" icon={<BlockIcon />} />
+                        ) : (
+                          <Chip label="Can Trade" color="success" size="small" icon={<CheckCircleIcon />} />
+                        )}
+                      </TableCell>
+                      <TableCell align="right">
+                        <IconButton
+                          size="small"
+                          color={user.trade_banned ? 'success' : 'warning'}
+                          title={user.trade_banned ? 'Lift trade ban' : 'Ban from trading'}
+                          onClick={() => handleToggleTradeBan(user)}
+                          sx={{ mr: 0.5 }}
+                        >
+                          {user.trade_banned ? <CheckCircleIcon fontSize="small" /> : <BlockIcon fontSize="small" />}
+                        </IconButton>
+                        <IconButton
+                          size="small"
+                          color="error"
+                          title="Delete account"
+                          onClick={() => setDeleteUserTarget(user)}
+                        >
+                          <DeleteIcon fontSize="small" />
+                        </IconButton>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                  {pagedUsers.length === 0 && (
+                    <TableRow>
+                      <TableCell colSpan={5} align="center">
+                        <Typography color="text.secondary" py={2}>
+                          No users found.
+                        </Typography>
+                      </TableCell>
+                    </TableRow>
+                  )}
+                </TableBody>
+              </Table>
+            </TableContainer>
+            <TablePagination
+              rowsPerPageOptions={[25, 50, 100]}
+              component="div"
+              count={filteredUsers.length}
+              rowsPerPage={userRowsPerPage}
+              page={userPage}
+              onPageChange={(_, p) => setUserPage(p)}
+              onRowsPerPageChange={(e) => {
+                setUserRowsPerPage(parseInt(e.target.value, 10));
+                setUserPage(0);
+              }}
+            />
+          </Paper>
+        )}
+      </TabPanel>
+
+      {/* Confirm Delete User Dialog */}
+      <Dialog open={!!deleteUserTarget} onClose={() => setDeleteUserTarget(null)}>
+        <DialogTitle>Delete User Account</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Are you sure you want to permanently delete the account for <strong>{deleteUserTarget?.username}</strong>? This will remove their collection, group memberships, and all trade history. This cannot be undone.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setDeleteUserTarget(null)}>Cancel</Button>
+          <Button color="error" variant="contained" onClick={handleDeleteUser}>
+            Delete Account
           </Button>
         </DialogActions>
       </Dialog>

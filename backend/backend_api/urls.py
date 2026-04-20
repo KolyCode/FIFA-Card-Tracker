@@ -31,4 +31,13 @@ urlpatterns = [
     path("mod/players/", views.mod_get_all_players, name="mod-players-list"),
     path("mod/players/add/", views.mod_add_player, name="mod-add-player"),
     path("mod/players/<int:player_id>/", views.mod_delete_player, name="mod-delete-player"),
+    path("mod/users/", views.mod_get_all_users, name="mod-users-list"),
+    path("mod/users/<int:user_id>/trade-ban/", views.mod_set_trade_ban, name="mod-trade-ban"),
+    path("mod/users/<int:user_id>/", views.mod_delete_user, name="mod-delete-user"),
+    # Trade endpoints
+    path("trades/", views.get_trades, name="trades-list"),
+    path("trades/create/", views.create_trade, name="trades-create"),
+    path("trades/<int:trade_id>/respond/", views.respond_to_trade, name="trades-respond"),
+    # User collection (for trade dialog)
+    path("users/<int:user_id>/collection/", views.get_user_collection, name="user-collection"),
 ]

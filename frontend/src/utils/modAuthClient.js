@@ -157,4 +157,54 @@ export const modApi = {
       return { error: { message: 'Network error.' } };
     }
   },
+
+  async getAllUsers() {
+    const token = getModToken();
+    if (!token) return { data: [], error: { message: 'Not logged in as moderator.' } };
+    try {
+      const res = await fetch(`${API_URL}/api/mod/users/`, {
+        headers: { 'Authorization': `Token ${token}` },
+      });
+      if (!res.ok) return { data: [], error: { message: 'Failed to fetch users.' } };
+      const data = await res.json();
+      return { data, error: null };
+    } catch {
+      return { data: [], error: { message: 'Network error.' } };
+    }
+  },
+
+  async setTradeBan(userId, banned) {
+    const token = getModToken();
+    if (!token) return { error: { message: 'Not logged in as moderator.' } };
+    try {
+      const res = await fetch(`${API_URL}/api/mod/users/${userId}/trade-ban/`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${token}` },
+        body: JSON.stringify({ banned }),
+      });
+      const data = await res.json();
+      if (!res.ok) return { error: { message: data.error || 'Failed to update trade ban.' } };
+      return { error: null };
+    } catch {
+      return { error: { message: 'Network error.' } };
+    }
+  },
+
+  async deleteUser(userId) {
+    const token = getModToken();
+    if (!token) return { error: { message: 'Not logged in as moderator.' } };
+    try {
+      const res = await fetch(`${API_URL}/api/mod/users/${userId}/`, {
+        method: 'DELETE',
+        headers: { 'Authorization': `Token ${token}` },
+      });
+      if (!res.ok) {
+        const data = await res.json();
+        return { error: { message: data.error || 'Failed to delete user.' } };
+      }
+      return { error: null };
+    } catch {
+      return { error: { message: 'Network error.' } };
+    }
+  },
 };

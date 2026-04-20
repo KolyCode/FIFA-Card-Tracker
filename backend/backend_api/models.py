@@ -50,6 +50,18 @@ class UserCollection(models.Model):
     def __str__(self):
         return f"{self.user.username} - {self.player_id}"
 
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(AuthUser, on_delete=models.CASCADE, related_name='profile')
+    trade_banned = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = 'user_profiles'
+
+    def __str__(self):
+        return f"Profile({self.user.username})"
+
+
 class Group(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True, null=True)
@@ -75,6 +87,29 @@ class GroupMembership(models.Model):
 
     def __str__(self):
         return f"{self.user.username} in {self.group.name} ({'admin' if self.is_admin else 'member'})"
+
+
+class Trade(models.Model):
+    STATUS_PENDING = 'pending'
+    STATUS_ACCEPTED = 'accepted'
+    STATUS_DECLINED = 'declined'
+    STATUS_CHOICES = [
+        (STATUS_PENDING, 'Pending'),
+        (STATUS_ACCEPTED, 'Accepted'),
+        (STATUS_DECLINED, 'Declined'),
+    ]
+
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name='trades')
+    from_user = models.ForeignKey(AuthUser, on_delete=models.CASCADE, related_name='trades_sent')
+    to_user = models.ForeignKey(AuthUser, on_delete=models.CASCADE, related_name='trades_received')
+    offered_player = models.ForeignKey(Player, on_delete=models.SET_NULL, null=True, related_name='trade_offers')
+    requested_player = models.ForeignKey(Player, on_delete=models.SET_NULL, null=True, related_name='trade_requests')
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default=STATUS_PENDING)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'trades'
 
 
 class GroupInvite(models.Model):
