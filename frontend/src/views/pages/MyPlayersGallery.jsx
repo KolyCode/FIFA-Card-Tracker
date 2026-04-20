@@ -4,7 +4,7 @@ import { Box, TextField, Typography, Grid, Alert, Fab, Paper, Button } from '@mu
 import AddIcon from '@mui/icons-material/Add';
 import LockIcon from '@mui/icons-material/Lock';
 import PlayerCard from '../../ui-component/cards/PlayerCard';
-import { supabase } from '../../utils/supabaseClient';
+import { supabase } from '../../utils/authClient';
 
 const MyPlayersGallery = () => {
     const navigate = useNavigate();

@@ -27,7 +27,7 @@ import UpgradePlanCard from './UpgradePlanCard';
 import MainCard from 'ui-component/cards/MainCard';
 import Transitions from 'ui-component/extended/Transitions';
 import useConfig from 'hooks/useConfig';
-import { supabase } from 'utils/supabaseClient';
+import { supabase } from 'utils/authClient';
 
 // assets
 import User1 from 'assets/images/users/user-round.svg';

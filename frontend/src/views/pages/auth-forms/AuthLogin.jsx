@@ -17,7 +17,7 @@ import Alert from '@mui/material/Alert';
 // project imports
 import AnimateButton from 'ui-component/extended/AnimateButton';
 import CustomFormControl from 'ui-component/extended/Form/CustomFormControl';
-import { supabase } from 'utils/supabaseClient';
+import { supabase } from 'utils/authClient';
 
 // assets
 import Visibility from '@mui/icons-material/Visibility';

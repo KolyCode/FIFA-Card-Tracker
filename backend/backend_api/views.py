@@ -1,7 +1,55 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.contrib.auth import authenticate
+from django.contrib.auth.models import User
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework.authtoken.models import Token
 
-# Create your views here.
 
 def home(request):
     return HttpResponse("The API says hello!")
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def auth_register(request):
+    email = request.data.get('email', '').strip().lower()
+    password = request.data.get('password', '')
+
+    if not email or not password:
+        return Response({'error': 'Email and password are required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    if User.objects.filter(username=email).exists():
+        return Response({'error': 'An account with this email already exists.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    user = User.objects.create_user(username=email, email=email, password=password)
+    return Response({'message': 'Account created. You can now log in.'}, status=status.HTTP_201_CREATED)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def auth_login(request):
+    email = request.data.get('email', '').strip().lower()
+    password = request.data.get('password', '')
+
+    user = authenticate(request, username=email, password=password)
+    if user is None:
+        return Response({'error': 'Invalid email or password.'}, status=status.HTTP_401_UNAUTHORIZED)
+
+    token, _ = Token.objects.get_or_create(user=user)
+    return Response({'token': token.key, 'email': user.email}, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def auth_logout(request):
+    request.user.auth_token.delete()
+    return Response({'message': 'Logged out.'}, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def auth_me(request):
+    return Response({'email': request.user.email, 'id': request.user.id}, status=status.HTTP_200_OK)

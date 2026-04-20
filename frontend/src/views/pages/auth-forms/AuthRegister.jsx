@@ -20,7 +20,7 @@ import Alert from '@mui/material/Alert';
 import AnimateButton from 'ui-component/extended/AnimateButton';
 import CustomFormControl from 'ui-component/extended/Form/CustomFormControl';
 import { strengthColor, strengthIndicator } from 'utils/password-strength';
-import { supabase } from 'utils/supabaseClient';
+import { supabase } from 'utils/authClient';
 
 // assets
 import Visibility from '@mui/icons-material/Visibility';
@@ -70,7 +70,7 @@ export default function AuthRegister() {
     if (error) {
       setAuthError(error.message);
     } else {
-      setAuthSuccess('Check your email to verify your account!');
+      setAuthSuccess('Account created! You can now log in.');
     }
     
     setIsSubmitting(false);

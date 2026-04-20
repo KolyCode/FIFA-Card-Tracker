@@ -10,7 +10,6 @@
     "@fontsource/roboto": "5.2.9",
     "@mui/icons-material": "7.3.5",
     "@mui/material": "7.3.5",
-    "@supabase/supabase-js": "^2.103.3",
     "@tabler/icons-react": "3.35.0",
     "@vitejs/plugin-react": "5.1.1",
     "apexcharts": "5.3.6",

@@ -19,7 +19,7 @@ import Breadcrumbs from 'ui-component/extended/Breadcrumbs';
 
 import useConfig from 'hooks/useConfig';
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
-import { supabase } from 'utils/supabaseClient';
+import { supabase } from 'utils/authClient';
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
