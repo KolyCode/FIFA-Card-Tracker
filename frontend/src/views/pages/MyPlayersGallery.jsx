@@ -17,6 +17,10 @@ const MyPlayersGallery = () => {
         const checkSession = async () => {
             const { data: { user } } = await supabase.auth.getUser();
             setIsLoggedIn(!!user);
+            if (user) {
+                const { data } = await supabase.collection.getAll();
+                setPlayers(data);
+            }
             setLoading(false);
         };
 
@@ -24,8 +28,14 @@ const MyPlayersGallery = () => {
 
         // Optional: listen for auth changes
         const { data: authListener } = supabase.auth.onAuthStateChange(
-            (event, session) => {
+            async (event, session) => {
                 setIsLoggedIn(!!session);
+                if (session) {
+                    const { data } = await supabase.collection.getAll();
+                    setPlayers(data);
+                } else {
+                    setPlayers([]);
+                }
             }
         );
 

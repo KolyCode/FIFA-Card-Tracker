@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User as AuthUser
 
 
 class Player(models.Model):
@@ -37,3 +38,14 @@ class UserCard(models.Model):
 
     def __str__(self):
         return f"{self.username_id} - {self.player_id}"
+
+
+class UserCollection(models.Model):
+    user = models.ForeignKey(AuthUser, on_delete=models.CASCADE, related_name='collection')
+    player = models.ForeignKey(Player, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = (('user', 'player'),)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.player_id}"

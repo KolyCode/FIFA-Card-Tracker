@@ -117,5 +117,54 @@ export const supabase = {
       };
     },
   },
+
+  collection: {
+    async getAll() {
+      const token = getStoredToken();
+      if (!token) return { data: [], error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/collection/`, {
+          headers: { 'Authorization': `Token ${token}` },
+        });
+        if (!res.ok) return { data: [], error: { message: 'Failed to fetch collection.' } };
+        const data = await res.json();
+        return { data, error: null };
+      } catch {
+        return { data: [], error: { message: 'Network error.' } };
+      }
+    },
+
+    async add(playerId) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/collection/add/`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${token}` },
+          body: JSON.stringify({ player_id: playerId }),
+        });
+        const data = await res.json();
+        if (!res.ok) return { error: { message: data.error || 'Failed to add player.' } };
+        return { error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+
+    async remove(playerId) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/collection/${playerId}/`, {
+          method: 'DELETE',
+          headers: { 'Authorization': `Token ${token}` },
+        });
+        if (!res.ok) return { error: { message: 'Failed to remove player.' } };
+        return { error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+  },
 };
 
