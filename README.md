@@ -17,7 +17,13 @@ A web app for tracking your FIFA World Cup sticker collection. Users can manage 
 git clone https://github.com/KolyCode/FIFA-Card-Tracker.git
 ```
 
-## Backend Setup
+## Automatic Setup
+```bash
+./start.sh
+```
+If this does not work, set up everything manually (explained below).
+
+## Manual Backend Setup
 
 ```bash
 cd backend
@@ -46,7 +52,7 @@ The API will be available at `http://localhost:8000`.
 
 ---
 
-## Frontend Setup
+## Manual Frontend Setup
 
 ```bash
 cd frontend
