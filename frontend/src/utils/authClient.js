@@ -166,5 +166,137 @@ export const supabase = {
       }
     },
   },
+
+  groups: {
+    async getAll() {
+      const token = getStoredToken();
+      if (!token) return { data: [], error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/groups/`, {
+          headers: { 'Authorization': `Token ${token}` },
+        });
+        if (!res.ok) return { data: [], error: { message: 'Failed to fetch groups.' } };
+        const data = await res.json();
+        return { data, error: null };
+      } catch {
+        return { data: [], error: { message: 'Network error.' } };
+      }
+    },
+
+    async create(name, description) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/groups/create/`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${token}` },
+          body: JSON.stringify({ name, description }),
+        });
+        const data = await res.json();
+        if (!res.ok) return { error: { message: data.error || 'Failed to create group.' } };
+        return { data, error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+
+    async join(groupId) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/groups/join/`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${token}` },
+          body: JSON.stringify({ group_id: groupId }),
+        });
+        const data = await res.json();
+        if (!res.ok) return { error: { message: data.error || 'Failed to join group.' } };
+        return { data, error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+
+    async leave(groupId) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/groups/${groupId}/leave/`, {
+          method: 'DELETE',
+          headers: { 'Authorization': `Token ${token}` },
+        });
+        if (!res.ok) return { error: { message: 'Failed to leave group.' } };
+        return { error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+
+    async addMember(groupId, username) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/groups/members/add/`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${token}` },
+          body: JSON.stringify({ group_id: groupId, username }),
+        });
+        const data = await res.json();
+        if (!res.ok) return { error: { message: data.error || 'Failed to add member.' } };
+        return { error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+
+    async removeMember(groupId, userId) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/groups/${groupId}/members/${userId}/remove/`, {
+          method: 'DELETE',
+          headers: { 'Authorization': `Token ${token}` },
+        });
+        if (!res.ok) return { error: { message: 'Failed to remove member.' } };
+        return { error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+
+    async promoteAdmin(groupId, userId) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/groups/admins/promote/`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${token}` },
+          body: JSON.stringify({ group_id: groupId, user_id: userId }),
+        });
+        const data = await res.json();
+        if (!res.ok) return { error: { message: data.error || 'Failed to promote admin.' } };
+        return { error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+
+    async demoteAdmin(groupId, userId) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/groups/admins/demote/`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${token}` },
+          body: JSON.stringify({ group_id: groupId, user_id: userId }),
+        });
+        const data = await res.json();
+        if (!res.ok) return { error: { message: data.error || 'Failed to demote admin.' } };
+        return { error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+  },
 };
 

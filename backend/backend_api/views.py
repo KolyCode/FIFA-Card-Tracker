@@ -6,7 +6,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.authtoken.models import Token
-from .models import Player, UserCollection
+from .models import Player, UserCollection, Group, GroupMembership
 
 
 def home(request):
@@ -93,3 +93,256 @@ def add_to_collection(request):
 def remove_from_collection(request, player_id):
     UserCollection.objects.filter(user=request.user, player_id=player_id).delete()
     return Response({'message': 'Player removed from collection.'}, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_groups(request):
+    memberships = GroupMembership.objects.filter(user=request.user).select_related('group', 'group__created_by')
+    groups = []
+    for membership in memberships:
+        group = membership.group
+        members = GroupMembership.objects.filter(group=group).select_related('user')
+        member_data = [
+            {
+                'id': m.user.id,
+                'username': m.user.username,
+                'email': m.user.email,
+                'is_admin': m.is_admin,
+                'joined_at': m.joined_at,
+            }
+            for m in members
+        ]
+        groups.append({
+            'id': group.id,
+            'name': group.name,
+            'description': group.description,
+            'created_by': group.created_by.username,
+            'created_at': group.created_at,
+            'member_count': len(member_data),
+            'is_admin': membership.is_admin,
+            'members': member_data,
+        })
+    return Response(groups, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def create_group(request):
+    name = request.data.get('name', '').strip()
+    description = request.data.get('description', '').strip()
+
+    if not name:
+        return Response({'error': 'Group name is required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    if Group.objects.filter(name=name).exists():
+        return Response({'error': 'A group with this name already exists.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    group = Group.objects.create(name=name, description=description, created_by=request.user)
+    GroupMembership.objects.create(group=group, user=request.user, is_admin=True)
+    
+    # Include members in the response
+    members = GroupMembership.objects.filter(group=group).select_related('user')
+    member_data = [
+        {
+            'id': m.user.id,
+            'username': m.user.username,
+            'email': m.user.email,
+            'is_admin': m.is_admin,
+            'joined_at': m.joined_at,
+        }
+        for m in members
+    ]
+    
+    return Response({
+        'id': group.id,
+        'name': group.name,
+        'description': group.description,
+        'created_by': group.created_by.username,
+        'created_at': group.created_at,
+        'member_count': 1,
+        'is_admin': True,
+        'members': member_data,
+    }, status=status.HTTP_201_CREATED)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def join_group(request):
+    group_id = request.data.get('group_id')
+    if not group_id:
+        return Response({'error': 'group_id is required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        group = Group.objects.get(id=group_id)
+    except Group.DoesNotExist:
+        return Response({'error': 'Group not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    membership, created = GroupMembership.objects.get_or_create(group=group, user=request.user)
+    if not created:
+        return Response({'error': 'You are already a member of this group.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    members = GroupMembership.objects.filter(group=group).select_related('user')
+    member_data = [
+        {
+            'id': m.user.id,
+            'username': m.user.username,
+            'email': m.user.email,
+            'is_admin': m.is_admin,
+            'joined_at': m.joined_at,
+        }
+        for m in members
+    ]
+
+    return Response({
+        'id': group.id,
+        'name': group.name,
+        'description': group.description,
+        'created_by': group.created_by.username,
+        'created_at': group.created_at,
+        'member_count': len(member_data),
+        'is_admin': False,
+        'members': member_data,
+    }, status=status.HTTP_201_CREATED)
+
+
+@api_view(['DELETE'])
+@permission_classes([IsAuthenticated])
+def leave_group(request, group_id):
+    GroupMembership.objects.filter(group_id=group_id, user=request.user).delete()
+    return Response({'message': 'Left the group.'}, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def add_member(request):
+    group_id = request.data.get('group_id')
+    username = request.data.get('username', '').strip()
+
+    if not group_id or not username:
+        return Response({'error': 'group_id and username are required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        group = Group.objects.get(id=group_id)
+    except Group.DoesNotExist:
+        return Response({'error': 'Group not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if requester is admin
+    try:
+        requester_membership = GroupMembership.objects.get(group=group, user=request.user)
+        if not requester_membership.is_admin:
+            return Response({'error': 'Only admins can add members.'}, status=status.HTTP_403_FORBIDDEN)
+    except GroupMembership.DoesNotExist:
+        return Response({'error': 'You are not a member of this group.'}, status=status.HTTP_403_FORBIDDEN)
+
+    try:
+        user_to_add = User.objects.get(username=username)
+    except User.DoesNotExist:
+        return Response({'error': 'User not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    membership, created = GroupMembership.objects.get_or_create(group=group, user=user_to_add)
+    if not created:
+        return Response({'error': 'User is already a member of this group.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    return Response({'message': f'Added {username} to the group.'}, status=status.HTTP_201_CREATED)
+
+
+@api_view(['DELETE'])
+@permission_classes([IsAuthenticated])
+def remove_member(request, group_id, user_id):
+    try:
+        group = Group.objects.get(id=group_id)
+    except Group.DoesNotExist:
+        return Response({'error': 'Group not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if requester is admin
+    try:
+        requester_membership = GroupMembership.objects.get(group=group, user=request.user)
+        if not requester_membership.is_admin:
+            return Response({'error': 'Only admins can remove members.'}, status=status.HTTP_403_FORBIDDEN)
+    except GroupMembership.DoesNotExist:
+        return Response({'error': 'You are not a member of this group.'}, status=status.HTTP_403_FORBIDDEN)
+
+    if int(user_id) == request.user.id:
+        return Response({'error': 'You cannot remove yourself from the group.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    deleted_count = GroupMembership.objects.filter(group=group, user_id=user_id).delete()
+    if deleted_count[0] == 0:
+        return Response({'error': 'User is not a member of this group.'}, status=status.HTTP_404_NOT_FOUND)
+
+    return Response({'message': 'Removed member from the group.'}, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def promote_admin(request):
+    group_id = request.data.get('group_id')
+    user_id = request.data.get('user_id')
+
+    if not group_id or not user_id:
+        return Response({'error': 'group_id and user_id are required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        group = Group.objects.get(id=group_id)
+    except Group.DoesNotExist:
+        return Response({'error': 'Group not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if requester is admin
+    try:
+        requester_membership = GroupMembership.objects.get(group=group, user=request.user)
+        if not requester_membership.is_admin:
+            return Response({'error': 'Only admins can promote members.'}, status=status.HTTP_403_FORBIDDEN)
+    except GroupMembership.DoesNotExist:
+        return Response({'error': 'You are not a member of this group.'}, status=status.HTTP_403_FORBIDDEN)
+
+    try:
+        membership = GroupMembership.objects.get(group=group, user_id=user_id)
+    except GroupMembership.DoesNotExist:
+        return Response({'error': 'User is not a member of this group.'}, status=status.HTTP_404_NOT_FOUND)
+
+    if membership.is_admin:
+        return Response({'error': 'User is already an admin.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    membership.is_admin = True
+    membership.save()
+
+    return Response({'message': 'User promoted to admin.'}, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def demote_admin(request):
+    group_id = request.data.get('group_id')
+    user_id = request.data.get('user_id')
+
+    if not group_id or not user_id:
+        return Response({'error': 'group_id and user_id are required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        group = Group.objects.get(id=group_id)
+    except Group.DoesNotExist:
+        return Response({'error': 'Group not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    # Check if requester is admin
+    try:
+        requester_membership = GroupMembership.objects.get(group=group, user=request.user)
+        if not requester_membership.is_admin:
+            return Response({'error': 'Only admins can demote admins.'}, status=status.HTTP_403_FORBIDDEN)
+    except GroupMembership.DoesNotExist:
+        return Response({'error': 'You are not a member of this group.'}, status=status.HTTP_403_FORBIDDEN)
+
+    if int(user_id) == request.user.id:
+        return Response({'error': 'You cannot demote yourself.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        membership = GroupMembership.objects.get(group=group, user_id=user_id)
+    except GroupMembership.DoesNotExist:
+        return Response({'error': 'User is not a member of this group.'}, status=status.HTTP_404_NOT_FOUND)
+
+    if not membership.is_admin:
+        return Response({'error': 'User is not an admin.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    membership.is_admin = False
+    membership.save()
+
+    return Response({'message': 'Admin demoted to member.'}, status=status.HTTP_200_OK)

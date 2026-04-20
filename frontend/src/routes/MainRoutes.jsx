@@ -8,6 +8,7 @@ import Loadable from 'ui-component/Loadable';
 const LandingPage = Loadable(lazy(() => import('views/pages/LandingPage')));
 const PlayerGallery = Loadable(lazy(() => import('views/pages/PlayerGallery')));
 const MyPlayersGallery = Loadable(lazy(() => import('views/pages/MyPlayersGallery')));
+const GroupsPage = Loadable(lazy(() => import('views/pages/GroupsPage')));
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -46,6 +47,10 @@ const MainRoutes = {
     {
       path: 'my-players',
       element: <MyPlayersGallery />
+    },
+    {
+      path: 'groups',
+      element: <GroupsPage />
     },
     {
       path: 'typography',

@@ -49,3 +49,29 @@ class UserCollection(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.player_id}"
+
+class Group(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField(blank=True, null=True)
+    created_by = models.ForeignKey(AuthUser, on_delete=models.CASCADE, related_name='created_groups')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'groups'
+
+    def __str__(self):
+        return self.name
+
+
+class GroupMembership(models.Model):
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name='memberships')
+    user = models.ForeignKey(AuthUser, on_delete=models.CASCADE)
+    joined_at = models.DateTimeField(auto_now_add=True)
+    is_admin = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = 'group_memberships'
+        unique_together = (('group', 'user'),)
+
+    def __str__(self):
+        return f"{self.user.username} in {self.group.name} ({'admin' if self.is_admin else 'member'})"

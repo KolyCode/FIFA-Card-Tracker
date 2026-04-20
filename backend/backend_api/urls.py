@@ -10,4 +10,12 @@ urlpatterns = [
     path("collection/", views.get_collection, name="collection-list"),
     path("collection/add/", views.add_to_collection, name="collection-add"),
     path("collection/<int:player_id>/", views.remove_from_collection, name="collection-remove"),
+    path("groups/", views.get_groups, name="groups-list"),
+    path("groups/create/", views.create_group, name="groups-create"),
+    path("groups/join/", views.join_group, name="groups-join"),
+    path("groups/<int:group_id>/leave/", views.leave_group, name="groups-leave"),
+    path("groups/members/add/", views.add_member, name="groups-add-member"),
+    path("groups/<int:group_id>/members/<int:user_id>/remove/", views.remove_member, name="groups-remove-member"),
+    path("groups/admins/promote/", views.promote_admin, name="groups-promote-admin"),
+    path("groups/admins/demote/", views.demote_admin, name="groups-demote-admin"),
 ]

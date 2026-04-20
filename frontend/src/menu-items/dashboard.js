@@ -1,8 +1,8 @@
 // assets
-import { IconUsers, IconBook, IconHome, IconHelp } from '@tabler/icons-react';
+import { IconUser, IconUsersGroup, IconBook, IconHome, IconHelp } from '@tabler/icons-react';
 
 // constant
-const icons = { IconUsers, IconBook, IconHome, IconHelp };
+const icons = { IconUser, IconUsersGroup, IconBook, IconHome, IconHelp };
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
@@ -24,7 +24,7 @@ const dashboard = {
       title: 'Player Gallery',
       type: 'item',
       url: '/dashboard/default',
-      icon: icons.IconUsers,
+      icon: icons.IconUser,
       breadcrumbs: false
     },
     {
@@ -33,6 +33,14 @@ const dashboard = {
       type: 'item',
       url: '/my-players',
       icon: icons.IconBook,
+      breadcrumbs: false
+    },
+    {
+      id: 'groups',
+      title: 'Groups',
+      type: 'item',
+      url: '/groups',
+      icon: icons.IconUsersGroup,
       breadcrumbs: false
     },
     {
