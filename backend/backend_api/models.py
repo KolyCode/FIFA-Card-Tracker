@@ -75,3 +75,27 @@ class GroupMembership(models.Model):
 
     def __str__(self):
         return f"{self.user.username} in {self.group.name} ({'admin' if self.is_admin else 'member'})"
+
+
+class GroupInvite(models.Model):
+    STATUS_PENDING = 'pending'
+    STATUS_ACCEPTED = 'accepted'
+    STATUS_DECLINED = 'declined'
+    STATUS_CHOICES = [
+        (STATUS_PENDING, 'Pending'),
+        (STATUS_ACCEPTED, 'Accepted'),
+        (STATUS_DECLINED, 'Declined'),
+    ]
+
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name='invites')
+    invited_user = models.ForeignKey(AuthUser, on_delete=models.CASCADE, related_name='received_invites')
+    invited_by = models.ForeignKey(AuthUser, on_delete=models.CASCADE, related_name='sent_invites')
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default=STATUS_PENDING)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = 'group_invites'
+        unique_together = (('group', 'invited_user'),)
+
+    def __str__(self):
+        return f"{self.invited_user.username} invited to {self.group.name} by {self.invited_by.username}"

@@ -31,14 +31,18 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import MailIcon from '@mui/icons-material/Mail';
+import CheckIcon from '@mui/icons-material/Check';
+import CloseIcon from '@mui/icons-material/Close';
 import { supabase } from '../../utils/authClient';
 
 const GroupsPage = () => {
   const [groups, setGroups] = useState([]);
+  const [invites, setInvites] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loading, setLoading] = useState(true);
   const [createDialogOpen, setCreateDialogOpen] = useState(false);
-  const [addMemberDialogOpen, setAddMemberDialogOpen] = useState(false);
+  const [inviteMemberDialogOpen, setInviteMemberDialogOpen] = useState(false);
   const [selectedGroup, setSelectedGroup] = useState(null);
   const [newGroupName, setNewGroupName] = useState('');
   const [newGroupDescription, setNewGroupDescription] = useState('');
@@ -53,6 +57,7 @@ const GroupsPage = () => {
       setIsLoggedIn(!!user);
       if (user) {
         loadGroups();
+        loadInvites();
       }
       setLoading(false);
     };
@@ -64,8 +69,10 @@ const GroupsPage = () => {
         setIsLoggedIn(!!session);
         if (session) {
           loadGroups();
+          loadInvites();
         } else {
           setGroups([]);
+          setInvites([]);
         }
       }
     );
@@ -81,6 +88,13 @@ const GroupsPage = () => {
       setError(error.message);
     } else {
       setGroups(data);
+    }
+  };
+
+  const loadInvites = async () => {
+    const { data, error } = await supabase.groups.getInvites();
+    if (!error) {
+      setInvites(data);
     }
   };
 
@@ -114,21 +128,43 @@ const GroupsPage = () => {
     }
   };
 
-  const handleAddMember = async () => {
+  const handleInviteMember = async () => {
     if (!newMemberUsername.trim() || !selectedGroup) {
       setError('Username is required.');
       return;
     }
 
-    const { error } = await supabase.groups.addMember(selectedGroup.id, newMemberUsername.trim());
+    const { error } = await supabase.groups.inviteMember(selectedGroup.id, newMemberUsername.trim());
     if (error) {
       setError(error.message);
     } else {
-      setAddMemberDialogOpen(false);
+      setInviteMemberDialogOpen(false);
       setNewMemberUsername('');
       setSelectedGroup(null);
+      setSuccess('Invite sent successfully!');
+      setTimeout(() => setSuccess(''), 3000);
+    }
+  };
+
+  const handleAcceptInvite = async (invite) => {
+    const { error } = await supabase.groups.respondToInvite(invite.id, 'accept');
+    if (error) {
+      setError(error.message);
+    } else {
+      setInvites(invites.filter(i => i.id !== invite.id));
       loadGroups();
-      setSuccess('Member added successfully!');
+      setSuccess(`Joined ${invite.group_name}!`);
+      setTimeout(() => setSuccess(''), 3000);
+    }
+  };
+
+  const handleDeclineInvite = async (invite) => {
+    const { error } = await supabase.groups.respondToInvite(invite.id, 'decline');
+    if (error) {
+      setError(error.message);
+    } else {
+      setInvites(invites.filter(i => i.id !== invite.id));
+      setSuccess('Invite declined.');
       setTimeout(() => setSuccess(''), 3000);
     }
   };
@@ -221,6 +257,53 @@ const GroupsPage = () => {
         </Alert>
       )}
 
+      {/* Pending Invites Section */}
+      {invites.length > 0 && (
+        <Box mb={4}>
+          <Box display="flex" alignItems="center" gap={1} mb={2}>
+            <MailIcon color="primary" />
+            <Typography variant="h6">Pending Invites</Typography>
+            <Chip label={invites.length} size="small" color="primary" />
+          </Box>
+          {invites.map((invite) => (
+            <Card key={invite.id} sx={{ mb: 1.5, borderLeft: '4px solid', borderColor: 'primary.main' }}>
+              <CardContent sx={{ py: 1.5, '&:last-child': { pb: 1.5 } }}>
+                <Box display="flex" alignItems="center" justifyContent="space-between">
+                  <Box>
+                    <Typography variant="body1">
+                      Invited to join <strong>{invite.group_name}</strong> by <strong>{invite.invited_by}</strong>
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      {new Date(invite.created_at).toLocaleDateString()}
+                    </Typography>
+                  </Box>
+                  <Box display="flex" gap={1}>
+                    <Button
+                      variant="contained"
+                      color="success"
+                      size="small"
+                      startIcon={<CheckIcon />}
+                      onClick={() => handleAcceptInvite(invite)}
+                    >
+                      Accept
+                    </Button>
+                    <Button
+                      variant="outlined"
+                      color="error"
+                      size="small"
+                      startIcon={<CloseIcon />}
+                      onClick={() => handleDeclineInvite(invite)}
+                    >
+                      Decline
+                    </Button>
+                  </Box>
+                </Box>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
+      )}
+
       {groups.length === 0 ? (
         <Box textAlign="center" py={8}>
           <GroupIcon sx={{ fontSize: 64, color: 'text.secondary', mb: 2 }} />
@@ -274,11 +357,11 @@ const GroupsPage = () => {
                         onClick={(e) => {
                           e.stopPropagation();
                           setSelectedGroup(group);
-                          setAddMemberDialogOpen(true);
+                          setInviteMemberDialogOpen(true);
                         }}
                         sx={{ mr: 1 }}
                       >
-                        Add Member
+                        Invite Member
                       </Button>
                     )}
                     <Button
@@ -388,12 +471,12 @@ const GroupsPage = () => {
         </DialogActions>
       </Dialog>
 
-      {/* Add Member Dialog */}
-      <Dialog open={addMemberDialogOpen} onClose={() => setAddMemberDialogOpen(false)} maxWidth="sm" fullWidth>
-        <DialogTitle>Add Member to {selectedGroup?.name}</DialogTitle>
+      {/* Invite Member Dialog */}
+      <Dialog open={inviteMemberDialogOpen} onClose={() => setInviteMemberDialogOpen(false)} maxWidth="sm" fullWidth>
+        <DialogTitle>Invite Member to {selectedGroup?.name}</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Enter the username of the person you want to add to this group.
+            Enter the email/username of the person you want to invite to this group.
           </DialogContentText>
           <TextField
             autoFocus
@@ -406,9 +489,9 @@ const GroupsPage = () => {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setAddMemberDialogOpen(false)}>Cancel</Button>
-          <Button onClick={handleAddMember} variant="contained">
-            Add Member
+          <Button onClick={() => setInviteMemberDialogOpen(false)}>Cancel</Button>
+          <Button onClick={handleInviteMember} variant="contained">
+            Send Invite
           </Button>
         </DialogActions>
       </Dialog>

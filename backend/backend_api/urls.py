@@ -14,8 +14,10 @@ urlpatterns = [
     path("groups/create/", views.create_group, name="groups-create"),
     path("groups/join/", views.join_group, name="groups-join"),
     path("groups/<int:group_id>/leave/", views.leave_group, name="groups-leave"),
-    path("groups/members/add/", views.add_member, name="groups-add-member"),
+    path("groups/members/invite/", views.invite_member, name="groups-invite-member"),
     path("groups/<int:group_id>/members/<int:user_id>/remove/", views.remove_member, name="groups-remove-member"),
     path("groups/admins/promote/", views.promote_admin, name="groups-promote-admin"),
     path("groups/admins/demote/", views.demote_admin, name="groups-demote-admin"),
+    path("groups/invites/", views.get_invites, name="groups-invites"),
+    path("groups/invites/<int:invite_id>/respond/", views.respond_to_invite, name="groups-respond-invite"),
 ]

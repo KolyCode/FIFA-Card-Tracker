@@ -232,17 +232,49 @@ export const supabase = {
       }
     },
 
-    async addMember(groupId, username) {
+    async inviteMember(groupId, username) {
       const token = getStoredToken();
       if (!token) return { error: { message: 'Not logged in.' } };
       try {
-        const res = await fetch(`${API_URL}/api/groups/members/add/`, {
+        const res = await fetch(`${API_URL}/api/groups/members/invite/`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${token}` },
           body: JSON.stringify({ group_id: groupId, username }),
         });
         const data = await res.json();
-        if (!res.ok) return { error: { message: data.error || 'Failed to add member.' } };
+        if (!res.ok) return { error: { message: data.error || 'Failed to send invite.' } };
+        return { error: null };
+      } catch {
+        return { error: { message: 'Network error.' } };
+      }
+    },
+
+    async getInvites() {
+      const token = getStoredToken();
+      if (!token) return { data: [], error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/groups/invites/`, {
+          headers: { 'Authorization': `Token ${token}` },
+        });
+        if (!res.ok) return { data: [], error: { message: 'Failed to fetch invites.' } };
+        const data = await res.json();
+        return { data, error: null };
+      } catch {
+        return { data: [], error: { message: 'Network error.' } };
+      }
+    },
+
+    async respondToInvite(inviteId, action) {
+      const token = getStoredToken();
+      if (!token) return { error: { message: 'Not logged in.' } };
+      try {
+        const res = await fetch(`${API_URL}/api/groups/invites/${inviteId}/respond/`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Token ${token}` },
+          body: JSON.stringify({ action }),
+        });
+        const data = await res.json();
+        if (!res.ok) return { error: { message: data.error || 'Failed to respond to invite.' } };
         return { error: null };
       } catch {
         return { error: { message: 'Network error.' } };

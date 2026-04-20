@@ -6,7 +6,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.authtoken.models import Token
-from .models import Player, UserCollection, Group, GroupMembership
+from .models import Player, UserCollection, Group, GroupMembership, GroupInvite
 
 
 def home(request):
@@ -215,7 +215,7 @@ def leave_group(request, group_id):
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
-def add_member(request):
+def invite_member(request):
     group_id = request.data.get('group_id')
     username = request.data.get('username', '').strip()
 
@@ -227,24 +227,82 @@ def add_member(request):
     except Group.DoesNotExist:
         return Response({'error': 'Group not found.'}, status=status.HTTP_404_NOT_FOUND)
 
-    # Check if requester is admin
+    # Check if requester is a member (admins only can invite)
     try:
         requester_membership = GroupMembership.objects.get(group=group, user=request.user)
         if not requester_membership.is_admin:
-            return Response({'error': 'Only admins can add members.'}, status=status.HTTP_403_FORBIDDEN)
+            return Response({'error': 'Only admins can invite members.'}, status=status.HTTP_403_FORBIDDEN)
     except GroupMembership.DoesNotExist:
         return Response({'error': 'You are not a member of this group.'}, status=status.HTTP_403_FORBIDDEN)
 
     try:
-        user_to_add = User.objects.get(username=username)
+        user_to_invite = User.objects.get(username=username)
     except User.DoesNotExist:
         return Response({'error': 'User not found.'}, status=status.HTTP_404_NOT_FOUND)
 
-    membership, created = GroupMembership.objects.get_or_create(group=group, user=user_to_add)
-    if not created:
+    if GroupMembership.objects.filter(group=group, user=user_to_invite).exists():
         return Response({'error': 'User is already a member of this group.'}, status=status.HTTP_400_BAD_REQUEST)
 
-    return Response({'message': f'Added {username} to the group.'}, status=status.HTTP_201_CREATED)
+    invite, created = GroupInvite.objects.get_or_create(
+        group=group,
+        invited_user=user_to_invite,
+        defaults={'invited_by': request.user, 'status': GroupInvite.STATUS_PENDING},
+    )
+    if not created:
+        if invite.status == GroupInvite.STATUS_PENDING:
+            return Response({'error': 'User has already been invited to this group.'}, status=status.HTTP_400_BAD_REQUEST)
+        # Re-invite if previously declined
+        invite.status = GroupInvite.STATUS_PENDING
+        invite.invited_by = request.user
+        invite.save()
+
+    return Response({'message': f'Invitation sent to {username}.'}, status=status.HTTP_201_CREATED)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_invites(request):
+    invites = GroupInvite.objects.filter(
+        invited_user=request.user,
+        status=GroupInvite.STATUS_PENDING,
+    ).select_related('group', 'invited_by')
+    data = [
+        {
+            'id': invite.id,
+            'group_id': invite.group.id,
+            'group_name': invite.group.name,
+            'invited_by': invite.invited_by.username,
+            'created_at': invite.created_at,
+        }
+        for invite in invites
+    ]
+    return Response(data, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def respond_to_invite(request, invite_id):
+    action = request.data.get('action')  # 'accept' or 'decline'
+    if action not in ('accept', 'decline'):
+        return Response({'error': 'action must be "accept" or "decline".'}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        invite = GroupInvite.objects.select_related('group').get(id=invite_id, invited_user=request.user)
+    except GroupInvite.DoesNotExist:
+        return Response({'error': 'Invite not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    if invite.status != GroupInvite.STATUS_PENDING:
+        return Response({'error': 'This invite has already been responded to.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    if action == 'accept':
+        invite.status = GroupInvite.STATUS_ACCEPTED
+        invite.save()
+        GroupMembership.objects.get_or_create(group=invite.group, user=request.user)
+        return Response({'message': f'You have joined {invite.group.name}.'}, status=status.HTTP_200_OK)
+    else:
+        invite.status = GroupInvite.STATUS_DECLINED
+        invite.save()
+        return Response({'message': 'Invite declined.'}, status=status.HTTP_200_OK)
 
 
 @api_view(['DELETE'])
