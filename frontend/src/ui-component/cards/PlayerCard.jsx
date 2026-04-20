@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardMedia, CardContent, Typography, Box, IconButton, useTheme } from '@mui/material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
 const PlayerCard = ({ player, isOwned = false, onActionClick }) => {
     const theme = useTheme();
@@ -46,8 +46,8 @@ const PlayerCard = ({ player, isOwned = false, onActionClick }) => {
                     justifyContent: 'center'
                 }}
             >
-                <IconButton size="small" onClick={handleActionClick} color={isOwned ? "success" : "default"}>
-                    {isOwned ? <CheckCircleIcon color="success" /> : <AddCircleOutlineIcon />}
+                <IconButton size="small" onClick={handleActionClick} color={isOwned ? "error" : "default"}>
+                    {isOwned ? <RemoveCircleOutlineIcon color="error" /> : <AddCircleOutlineIcon />}
                 </IconButton>
             </Box>
             

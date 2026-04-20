@@ -52,6 +52,11 @@ const MyPlayersGallery = () => {
         (player.team?.toLowerCase() || '').includes(searchQuery.toLowerCase())
     );
 
+    const handleRemove = async (player) => {
+        await supabase.collection.remove(player.sofifa_id);
+        setPlayers((prev) => prev.filter((p) => p.sofifa_id !== player.sofifa_id));
+    };
+
     if (loading) return null;
 
     if (!isLoggedIn) {
@@ -129,7 +134,7 @@ const MyPlayersGallery = () => {
                 <Grid container spacing={3}>
                     {filteredPlayers.map((player) => (
                         <Grid item xs={12} sm={6} md={4} lg={3} key={player.sofifa_id}>
-                            <PlayerCard player={player} />
+                            <PlayerCard player={player} isOwned={true} onActionClick={handleRemove} />
                         </Grid>
                     ))}
                 </Grid>
