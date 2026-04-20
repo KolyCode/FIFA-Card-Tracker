@@ -1,7 +1,71 @@
-### On getting player images (REMOVE LATER)
+# FIFA Card Tracker
 
-Each player's photo is located at https://cdn.sofifa.net/players/<first 3 numbers of player id>/<next 3 numbers of player id>/22_240
+A web app for tracking your FIFA World Cup sticker collection. Users can manage their card collections, join groups, and trade stickers with other members.
 
-# FIFA-Card-Tracker
+**Stack:** React (Vite) + Django REST Framework + SQLite
 
-you have to run the load_players script to load all the players into the django database
+---
+
+## Prerequisites
+
+- Python 3.10+
+- Node.js 18+
+
+---
+## Installation
+```bash
+git clone https://github.com/KolyCode/FIFA-Card-Tracker.git
+```
+
+## Backend Setup
+
+```bash
+cd backend
+
+# Create and activate a virtual environment
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Apply database migrations
+python manage.py migrate
+
+# Load player data into the database
+python manage.py load_players
+
+# (Optional) Create a moderator account
+python manage.py create_moderator --username admin --password admin
+
+# Start the development server
+python manage.py runserver
+```
+
+The API will be available at `http://localhost:8000`.
+
+---
+
+## Frontend Setup
+
+```bash
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
+```
+
+The app will be available at `http://localhost:5173`.
+
+---
+
+## Environment Variables
+
+The frontend defaults to `http://localhost:8000` for the API. To override this, create a `.env` file in the `frontend/` directory:
+
+```
+VITE_API_URL=http://your-api-url
+```
