@@ -1,20 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Box, TextField, Typography, Grid } from '@mui/material';
 import PlayerCard from '../../ui-component/cards/PlayerCard';
-import playersData from '../../data/playersData.json';
 import { supabase } from '../../utils/authClient';
-
-// Deduplicate the players data based on sofifa_id to prevent React key prop rendering issues
-const uniquePlayersMap = new Map();
-playersData.forEach((player) => {
-    if (player.sofifa_id && !uniquePlayersMap.has(player.sofifa_id)) {
-        uniquePlayersMap.set(player.sofifa_id, player);
-    }
-});
-const uniquePlayersData = Array.from(uniquePlayersMap.values());
 
 const PlayerGallery = () => {
     const [searchQuery, setSearchQuery] = useState('');
+    const [players, setPlayers] = useState([]);
     const [ownedIds, setOwnedIds] = useState(new Set());
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -24,6 +15,11 @@ const PlayerGallery = () => {
     }, []);
 
     useEffect(() => {
+        // Load all players from the database
+        supabase.players.getAll().then(({ data }) => {
+            if (data) setPlayers(data);
+        });
+
         const init = async () => {
             const { data: { user } } = await supabase.auth.getUser();
             if (user) {
@@ -58,7 +54,7 @@ const PlayerGallery = () => {
         }
     };
 
-    const filteredPlayers = uniquePlayersData.filter((player) =>
+    const filteredPlayers = players.filter((player) =>
         (player.player_name?.toLowerCase() || '').includes(searchQuery.toLowerCase()) ||
         (player.team?.toLowerCase() || '').includes(searchQuery.toLowerCase())
     );
@@ -74,7 +70,7 @@ const PlayerGallery = () => {
                     sx={{ width: { xs: '100%', sm: '400px', md: '500px' }, mb: 2 }}
                 />
                 <Typography variant="subtitle1" color="text.secondary">
-                    Showing {filteredPlayers.length} of {uniquePlayersData.length} players
+                    Showing {filteredPlayers.length} of {players.length} players
                 </Typography>
             </Box>
 
@@ -83,7 +79,7 @@ const PlayerGallery = () => {
                     <Grid item xs={12} sm={6} md={4} lg={3} key={player.sofifa_id}>
                         <PlayerCard
                             player={player}
-                            isOwned={ownedIds.has(player.sofifa_id)}
+                            isOwned={ownedIds.has(String(player.sofifa_id))}
                             onActionClick={isLoggedIn ? handleActionClick : undefined}
                         />
                     </Grid>

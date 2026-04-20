@@ -118,6 +118,19 @@ export const supabase = {
     },
   },
 
+  players: {
+    async getAll() {
+      try {
+        const res = await fetch(`${API_URL}/api/players/`);
+        if (!res.ok) return { data: [], error: { message: 'Failed to fetch players.' } };
+        const data = await res.json();
+        return { data, error: null };
+      } catch {
+        return { data: [], error: { message: 'Network error.' } };
+      }
+    },
+  },
+
   collection: {
     async getAll() {
       const token = getStoredToken();

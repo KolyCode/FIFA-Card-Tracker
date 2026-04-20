@@ -1,8 +1,8 @@
 // assets
-import { IconUser, IconUsersGroup, IconBook, IconHome, IconHelp } from '@tabler/icons-react';
+import { IconUser, IconUsersGroup, IconBook, IconHome, IconHelp, IconShield } from '@tabler/icons-react';
 
 // constant
-const icons = { IconUser, IconUsersGroup, IconBook, IconHome, IconHelp };
+const icons = { IconUser, IconUsersGroup, IconBook, IconHome, IconHelp, IconShield };
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
@@ -51,6 +51,15 @@ const dashboard = {
       icon: icons.IconHelp,
       external: true,
       target: true
+    },
+    {
+      id: 'moderator-dashboard',
+      title: 'Moderator Dashboard',
+      type: 'item',
+      url: '/moderator-dashboard',
+      icon: icons.IconShield,
+      breadcrumbs: false,
+      requiresModerator: true
     }
   ]
 };

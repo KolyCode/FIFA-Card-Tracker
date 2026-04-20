@@ -20,16 +20,29 @@ function MenuList() {
 
   const [selectedID, setSelectedID] = useState('');
 
+  const isModerator = !!localStorage.getItem('mod_token');
+
+  // Filter moderator-only items based on login status
+  const filteredMenuItems = {
+    ...menuItems,
+    items: menuItems.items.map((group) => ({
+      ...group,
+      children: group.children
+        ? group.children.filter((item) => !item.requiresModerator || isModerator)
+        : group.children,
+    })),
+  };
+
   const lastItem = null;
 
-  let lastItemIndex = menuItems.items.length - 1;
+  let lastItemIndex = filteredMenuItems.items.length - 1;
   let remItems = [];
   let lastItemId;
 
-  if (lastItem && lastItem < menuItems.items.length) {
-    lastItemId = menuItems.items[lastItem - 1].id;
+  if (lastItem && lastItem < filteredMenuItems.items.length) {
+    lastItemId = filteredMenuItems.items[lastItem - 1].id;
     lastItemIndex = lastItem - 1;
-    remItems = menuItems.items.slice(lastItem - 1, menuItems.items.length).map((item) => ({
+    remItems = filteredMenuItems.items.slice(lastItem - 1, filteredMenuItems.items.length).map((item) => ({
       title: item.title,
       elements: item.children,
       icon: item.icon,
@@ -39,7 +52,7 @@ function MenuList() {
     }));
   }
 
-  const navItems = menuItems.items.slice(0, lastItemIndex + 1).map((item, index) => {
+  const navItems = filteredMenuItems.items.slice(0, lastItemIndex + 1).map((item, index) => {
     switch (item.type) {
       case 'group':
         if (item.url && item.id !== lastItemId) {

@@ -9,6 +9,7 @@ const LandingPage = Loadable(lazy(() => import('views/pages/LandingPage')));
 const PlayerGallery = Loadable(lazy(() => import('views/pages/PlayerGallery')));
 const MyPlayersGallery = Loadable(lazy(() => import('views/pages/MyPlayersGallery')));
 const GroupsPage = Loadable(lazy(() => import('views/pages/GroupsPage')));
+const ModeratorDashboard = Loadable(lazy(() => import('views/pages/ModeratorDashboard')));
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -51,6 +52,10 @@ const MainRoutes = {
     {
       path: 'groups',
       element: <GroupsPage />
+    },
+    {
+      path: 'moderator-dashboard',
+      element: <ModeratorDashboard />
     },
     {
       path: 'typography',

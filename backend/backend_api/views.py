@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.permissions import AllowAny, IsAuthenticated, BasePermission
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.authtoken.models import Token
@@ -93,6 +93,24 @@ def add_to_collection(request):
 def remove_from_collection(request, player_id):
     UserCollection.objects.filter(user=request.user, player_id=player_id).delete()
     return Response({'message': 'Player removed from collection.'}, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def get_all_players(request):
+    players = Player.objects.all().order_by('sticker_number')
+    data = [
+        {
+            'sofifa_id': p.id,
+            'sticker_number': p.sticker_number,
+            'player_name': p.player_name,
+            'team': p.team,
+            'position': p.position,
+            'birth_year': p.birth_year,
+        }
+        for p in players
+    ]
+    return Response(data, status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
@@ -404,3 +422,159 @@ def demote_admin(request):
     membership.save()
 
     return Response({'message': 'Admin demoted to member.'}, status=status.HTTP_200_OK)
+
+
+# ==============================|| MODERATOR VIEWS ||============================== #
+
+class IsStaffUser(BasePermission):
+    def has_permission(self, request, view):
+        return bool(request.user and request.user.is_authenticated and request.user.is_staff)
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def mod_login(request):
+    username = request.data.get('username', '').strip()
+    password = request.data.get('password', '')
+
+    if not username or not password:
+        return Response({'error': 'Username and password are required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    user = authenticate(request, username=username, password=password)
+    if user is None or not user.is_staff:
+        return Response({'error': 'Invalid credentials or not a moderator.'}, status=status.HTTP_401_UNAUTHORIZED)
+
+    token, _ = Token.objects.get_or_create(user=user)
+    return Response({'token': token.key, 'username': user.username}, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@permission_classes([IsStaffUser])
+def mod_me(request):
+    return Response({'username': request.user.username, 'is_staff': True}, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@permission_classes([IsStaffUser])
+def mod_get_all_groups(request):
+    groups_qs = Group.objects.all().select_related('created_by').prefetch_related('memberships__user')
+    data = []
+    for group in groups_qs:
+        members = [
+            {'id': m.user.id, 'username': m.user.username, 'email': m.user.email, 'is_admin': m.is_admin}
+            for m in group.memberships.all()
+        ]
+        data.append({
+            'id': group.id,
+            'name': group.name,
+            'description': group.description,
+            'created_by': group.created_by.username,
+            'created_at': group.created_at,
+            'member_count': len(members),
+            'members': members,
+        })
+    return Response(data, status=status.HTTP_200_OK)
+
+
+@api_view(['DELETE'])
+@permission_classes([IsStaffUser])
+def mod_delete_group(request, group_id):
+    try:
+        group = Group.objects.get(id=group_id)
+    except Group.DoesNotExist:
+        return Response({'error': 'Group not found.'}, status=status.HTTP_404_NOT_FOUND)
+    group.delete()
+    return Response({'message': 'Group deleted.'}, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsStaffUser])
+def mod_add_member(request):
+    group_id = request.data.get('group_id')
+    username = request.data.get('username', '').strip()
+
+    if not group_id or not username:
+        return Response({'error': 'group_id and username are required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    try:
+        group = Group.objects.get(id=group_id)
+    except Group.DoesNotExist:
+        return Response({'error': 'Group not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    try:
+        user_to_add = User.objects.get(username=username)
+    except User.DoesNotExist:
+        return Response({'error': 'User not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+    membership, created = GroupMembership.objects.get_or_create(group=group, user=user_to_add)
+    if not created:
+        return Response({'error': 'User is already a member of this group.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    return Response({'message': f'Added {username} to the group.'}, status=status.HTTP_201_CREATED)
+
+
+@api_view(['DELETE'])
+@permission_classes([IsStaffUser])
+def mod_remove_member(request, group_id, user_id):
+    deleted_count, _ = GroupMembership.objects.filter(group_id=group_id, user_id=user_id).delete()
+    if deleted_count == 0:
+        return Response({'error': 'User is not a member of this group.'}, status=status.HTTP_404_NOT_FOUND)
+    return Response({'message': 'Removed member from the group.'}, status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+@permission_classes([IsStaffUser])
+def mod_get_all_players(request):
+    players = Player.objects.all().order_by('sticker_number')
+    data = [
+        {
+            'id': p.id,
+            'sticker_number': p.sticker_number,
+            'player_name': p.player_name,
+            'team': p.team,
+            'position': p.position,
+            'birth_year': p.birth_year,
+        }
+        for p in players
+    ]
+    return Response(data, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsStaffUser])
+def mod_add_player(request):
+    player_id = request.data.get('id')
+    if not player_id:
+        return Response({'error': 'id is required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    if Player.objects.filter(id=player_id).exists():
+        return Response({'error': 'A player with this ID already exists.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    player = Player.objects.create(
+        id=player_id,
+        sticker_number=request.data.get('sticker_number', ''),
+        player_name=request.data.get('player_name', ''),
+        team=request.data.get('team', ''),
+        position=request.data.get('position', ''),
+        birth_year=request.data.get('birth_year') or None,
+    )
+    return Response({
+        'id': player.id,
+        'sticker_number': player.sticker_number,
+        'player_name': player.player_name,
+        'team': player.team,
+        'position': player.position,
+        'birth_year': player.birth_year,
+    }, status=status.HTTP_201_CREATED)
+
+
+@api_view(['DELETE'])
+@permission_classes([IsStaffUser])
+def mod_delete_player(request, player_id):
+    try:
+        player = Player.objects.get(id=player_id)
+    except Player.DoesNotExist:
+        return Response({'error': 'Player not found.'}, status=status.HTTP_404_NOT_FOUND)
+    player.delete()  # CASCADE removes from UserCollection
+    return Response({'message': 'Player deleted from database and all user galleries.'}, status=status.HTTP_200_OK)
+

@@ -47,6 +47,9 @@ export default function Login() {
                   <Typography component={Link} to="/pages/register" variant="subtitle1" sx={{ textDecoration: 'none' }}>
                     Don&apos;t have an account?
                   </Typography>
+                  <Typography component={Link} to="/pages/mod-login" variant="subtitle2" sx={{ textDecoration: 'none', color: 'warning.main', mt: 1 }}>
+                    Moderator login
+                  </Typography>
                 </Stack>
               </Stack>
             </AuthCardWrapper>
