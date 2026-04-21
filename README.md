@@ -8,8 +8,17 @@ A web app for tracking your FIFA World Cup sticker collection. Users can manage 
 
 ## Prerequisites
 
-- Python 3.10+
-- Node.js 18+
+- Python 3.10+: --python version
+- Node.js 18+: -node v
+- npm: -npm v
+
+Ensure all prerequisites are updated to their latest stable releases to guarantee compatibility with the following:
+- **Django:** Installed into the Python virtual environment (`.venv`) during the `pip install` step.
+  - To check if installed: Ensure you are in the /backend directory and .venv is active. Run `python -m django --version`.
+* **React & Vite:** Installed into the `node_modules` folder during the `npm install` step.
+  - To check if React and Vite are installed: Ensure you are inside the /frontend directory. Run `npm list react`. Then run `npx vite -v`.
+* **SQLite:** This is bundled with Python by default, so no separate installation is required.
+  - To check if SQLite is installed: Run `sqlite3 --version`.
 
 ---
 ## Installation
@@ -21,6 +30,7 @@ git clone https://github.com/KolyCode/FIFA-Card-Tracker.git
 ```bash
 ./start.sh
 ```
+Please make sure before running this command, you have 
 If this does not work, set up everything manually (explained below).
 
 ## Manual Backend Setup
