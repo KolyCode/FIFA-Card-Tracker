@@ -1,3 +1,4 @@
+// Developed by Connor Kilroy (UFID: 93903422)
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -66,32 +67,20 @@ export default function ProfileSection() {
   };
 
   useEffect(() => {
-    const fetchUser = async () => {
-      setIsLoading(true);
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
-        setUserName(user.email || user.user_metadata?.display_name || 'User');
+    setIsLoading(true);
+    try {
+      const storedUser = localStorage.getItem('user');
+      if (storedUser) {
+        const parsedUser = JSON.parse(storedUser);
+        setUserName(parsedUser.username || 'Guest');
       } else {
         setUserName('Guest');
       }
-      setIsLoading(false);
-    };
-    
-    fetchUser();
-
-    // Listen for auth changes to update the username automatically
-    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
-      if (session?.user) {
-        setUserName(session.user.email || session.user.user_metadata?.display_name || 'User');
-      } else {
-        setUserName('Guest');
-      }
-      setIsLoading(false);
-    });
-
-    return () => {
-      authListener.subscription.unsubscribe();
-    };
+    } catch (error) {
+      console.error('Error parsing user data:', error);
+      setUserName('Guest');
+    }
+    setIsLoading(false);
   }, []);
 
   const prevOpen = useRef(open);
@@ -112,12 +101,13 @@ export default function ProfileSection() {
     navigate('/pages/login');
   };
 
+  // @connor-contribution: Stripped trailing user element to simplify standalone customized greeting block correctly formatted dynamically.
   const currentHour = new Date().getHours();
-  let greeting = 'Good Evening,';
+  let greeting = 'Good Evening!';
   if (currentHour >= 5 && currentHour < 12) {
-    greeting = 'Good Morning,';
+    greeting = 'Good Morning!';
   } else if (currentHour >= 12 && currentHour < 17) {
-    greeting = 'Good Afternoon,';
+    greeting = 'Good Afternoon!';
   }
 
   return (
@@ -167,29 +157,9 @@ export default function ProfileSection() {
                 {open && (
                   <MainCard border={false} elevation={16} content={false} boxShadow shadow={theme.shadows[16]}>
                     <Box sx={{ p: 2, pb: 0 }}>
-                      <Stack>
-                        <Stack direction="row" sx={{ alignItems: 'center', gap: 0.5 }}>
-                          <Typography variant="h4">{greeting}</Typography>
-                          <Typography component="span" variant="h4" sx={{ fontWeight: 400 }}>
-                            {isLoading ? '...' : userName}
-                          </Typography>
-                        </Stack>
-                        <Typography variant="subtitle2">Project Admin</Typography>
+                      <Stack direction="row" sx={{ alignItems: 'center', gap: 0.5, pb: 2 }}>
+                        <Typography variant="h4">{greeting}</Typography>
                       </Stack>
-                      <OutlinedInput
-                        sx={{ width: '100%', pr: 1, pl: 2, my: 2 }}
-                        id="input-search-profile"
-                        value={value}
-                        onChange={(e) => setValue(e.target.value)}
-                        placeholder="Search profile options"
-                        startAdornment={
-                          <InputAdornment position="start">
-                            <IconSearch stroke={1.5} size="16px" />
-                          </InputAdornment>
-                        }
-                        aria-describedby="search-helper-text"
-                        slotProps={{ input: { 'aria-label': 'weight' } }}
-                      />
                       <Divider />
                     </Box>
                     <Box
@@ -228,29 +198,20 @@ export default function ProfileSection() {
                           '& .MuiListItemButton-root': { mt: 0.5 }
                         }}
                       >
-                        <ListItemButton sx={{ borderRadius: `${borderRadius}px` }}>
+                        <ListItemButton sx={{ borderRadius: `${borderRadius}px` }} onClick={(event) => { handleClose(event); navigate('/account-settings'); }}>
                           <ListItemIcon>
                             <IconSettings stroke={1.5} size="20px" />
                           </ListItemIcon>
                           <ListItemText primary={<Typography variant="body2">Account Settings</Typography>} />
                         </ListItemButton>
-                        <ListItemButton sx={{ borderRadius: `${borderRadius}px` }}>
+                        <ListItemButton sx={{ borderRadius: `${borderRadius}px` }} onClick={(event) => { handleClose(event); navigate('/groups'); }}>
                           <ListItemIcon>
                             <IconUser stroke={1.5} size="20px" />
                           </ListItemIcon>
                           <ListItemText
                             primary={
                               <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
-                                <Typography variant="body2">Social Profile</Typography>
-                                <Chip
-                                  slotProps={{
-                                    label: { sx: { mt: 0.25 } }
-                                  }}
-                                  label="02"
-                                  variant="filled"
-                                  size="small"
-                                  color="warning"
-                                />
+                                <Typography variant="body2">My Groups</Typography>
                               </Stack>
                             }
                           />

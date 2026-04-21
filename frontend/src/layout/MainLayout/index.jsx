@@ -1,3 +1,4 @@
+// Developed by Connor Kilroy (UFID: 93903422)
 import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 

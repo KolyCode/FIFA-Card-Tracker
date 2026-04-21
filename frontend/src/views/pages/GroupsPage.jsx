@@ -1,3 +1,4 @@
+// Developed by Connor Kilroy (UFID: 93903422)
 import React, { useState, useEffect } from 'react';
 import {
   Box,
@@ -36,9 +37,12 @@ import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 import { supabase } from '../../utils/authClient';
+import LockIcon from '@mui/icons-material/Lock';
+import { useNavigate } from 'react-router-dom';
 import TradeDialog from './TradeDialog';
 
 const GroupsPage = () => {
+  const navigate = useNavigate();
   const [groups, setGroups] = useState([]);
   const [invites, setInvites] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -299,13 +303,28 @@ const GroupsPage = () => {
     );
   }
 
+// @connor-contribution: Added guest authentication barrier lock screen fallback rendering properly stylized locked view
   if (!isLoggedIn) {
     return (
-      <Box p={3}>
-        <Alert severity="info">
-          Please log in to view and manage your groups.
-        </Alert>
-      </Box>
+        <Box sx={{ p: 3, display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh' }}>
+            <Card elevation={3} sx={{ p: 5, textAlign: 'center', maxWidth: 500, borderRadius: 3 }}>
+                <LockIcon color="action" sx={{ fontSize: 60, mb: 2 }} />
+                <Typography variant="h4" gutterBottom>
+                    Groups Login Required
+                </Typography>
+                <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
+                    Log in or Sign up to view and manage your trading groups!
+                </Typography>
+                <Button 
+                    variant="contained" 
+                    color="primary" 
+                    size="large"
+                    onClick={() => navigate('/pages/login?redirect=/groups')}
+                >
+                    Login
+                </Button>
+            </Card>
+        </Box>
     );
   }
 

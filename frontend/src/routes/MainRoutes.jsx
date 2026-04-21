@@ -1,3 +1,4 @@
+// Developed by Connor Kilroy (UFID: 93903422)
 import { lazy } from 'react';
 
 // project imports
@@ -10,6 +11,7 @@ const PlayerGallery = Loadable(lazy(() => import('views/pages/PlayerGallery')));
 const MyPlayersGallery = Loadable(lazy(() => import('views/pages/MyPlayersGallery')));
 const GroupsPage = Loadable(lazy(() => import('views/pages/GroupsPage')));
 const ModeratorDashboard = Loadable(lazy(() => import('views/pages/ModeratorDashboard')));
+const AccountSettings = Loadable(lazy(() => import('views/pages/AccountSettings')));
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -72,6 +74,10 @@ const MainRoutes = {
     {
       path: '/sample-page',
       element: <SamplePage />
+    },
+    {
+      path: 'account-settings',
+      element: <AccountSettings />
     }
   ]
 };

@@ -1,3 +1,4 @@
+// Developed by Connor Kilroy (UFID: 93903422)
 import { Activity, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -124,12 +125,9 @@ export default function NotificationSection() {
                     <Stack sx={{ gap: 2 }}>
                       <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between', pt: 2, px: 2 }}>
                         <Stack direction="row" sx={{ gap: 2 }}>
-                          <Typography variant="subtitle1">All Notification</Typography>
+                          <Typography variant="subtitle1">All Notifications</Typography>
                           <Chip size="small" label="01" variant="filled" sx={{ color: 'background.default', bgcolor: 'warning.dark' }} />
                         </Stack>
-                        <Typography component={Link} to="#" variant="subtitle2" sx={{ color: 'primary.main' }}>
-                          Mark as all read
-                        </Typography>
                       </Stack>
                       <Box sx={{ height: 1, maxHeight: 'calc(100vh - 205px)', overflowX: 'hidden', '&::-webkit-scrollbar': { width: 5 } }}>
                         <Box sx={{ px: 2, pt: 0.25 }}>

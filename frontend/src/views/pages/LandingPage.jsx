@@ -1,3 +1,4 @@
+// Developed by Connor Kilroy (UFID: 93903422)
 import React, { useRef } from 'react';
 import {
   Box,
