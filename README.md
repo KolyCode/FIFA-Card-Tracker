@@ -13,7 +13,7 @@ A web app for tracking your FIFA World Cup sticker collection. Users can manage 
 - npm: -npm v
 
 Ensure all prerequisites are updated to their latest stable releases to guarantee compatibility with the following:
-- **Django:** Installed into the Python virtual environment (`.venv`) during the `pip install` step.
+* **Django:** Installed into the Python virtual environment (`.venv`) during the `pip install` step.
   - To check if installed: Ensure you are in the /backend directory and .venv is active. Run `python -m django --version`.
 * **React & Vite:** Installed into the `node_modules` folder during the `npm install` step.
   - To check if React and Vite are installed: Ensure you are inside the /frontend directory. Run `npm list react`. Then run `npx vite -v`.
